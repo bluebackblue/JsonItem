@@ -1,0 +1,21 @@
+{
+  "name": "blueback.jsonitem",
+  "displayName": "JsonItem",
+  "version": "0.0.7",
+  "unity": "2020.1",
+  "description": "JSON操作",
+  "author": {
+    "name": "BlueBack",
+    "url": "https://github.com/bluebackblue"
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "ObjectToJson",
+      "path": "Samples~/ObjectToJson"
+    }
+  ]
+}
