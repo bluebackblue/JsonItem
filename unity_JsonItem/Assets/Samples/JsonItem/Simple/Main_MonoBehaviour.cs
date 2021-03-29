@@ -1,8 +1,8 @@
+﻿
 
-
-/** Samples.JsonItem.FloatIntSpeedTest
+/** Samples.JsonItem.Simple
 */
-namespace Samples.JsonItem.FloatIntSpeedTest
+namespace Samples.JsonItem.Simple
 {
 	/** Main_MonoBehaviour
 	*/
