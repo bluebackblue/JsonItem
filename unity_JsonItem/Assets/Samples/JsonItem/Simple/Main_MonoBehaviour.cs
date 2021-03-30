@@ -1,4 +1,4 @@
-﻿
+
 
 /** Samples.JsonItem.Simple
 */
@@ -8,13 +8,6 @@ namespace Samples.JsonItem.Simple
 	*/
 	public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
-		/** Error
-		*/
-		public static void Error()
-		{
-			UnityEngine.Debug.Assert(false);
-		}
-
 		/** Item
 		*/
 		public struct Item
@@ -28,8 +21,6 @@ namespace Samples.JsonItem.Simple
 		*/
 		private void Start()
 		{
-			BlueBack.JsonItem.Config.ERRORPROC = Error;
-
 			Item t_from_item = new Item()
 			{
 				x = 100,
