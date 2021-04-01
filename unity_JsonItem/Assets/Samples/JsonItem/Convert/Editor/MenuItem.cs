@@ -1,25 +1,27 @@
 
 
-/** Samples.JsonItem.Simple
+/** Samples.JsonItem.Convert.Editor
 */
-namespace Samples.JsonItem.Simple
+namespace Samples.JsonItem.Convert.Editor
 {
-	/** Main_MonoBehaviour
+	/** MenuItem
 	*/
-	public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
+	#if(UNITY_EDITOR)
+	public class MenuItem
 	{
 		/** Item
 		*/
-		public struct Item
+		private struct Item
 		{
 			public int x;
 			public bool yy;
 			public float zzz;
 		}
 
-		/** Start
+		/** シーンを開く。
 		*/
-		private void Start()
+		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Test")]
+		private static void MenuItem_Sample_AssetLib_Convert_Test()
 		{
 			Item t_from_item = new Item()
 			{
@@ -48,5 +50,6 @@ namespace Samples.JsonItem.Simple
 			UnityEngine.Debug.Log("JsonItem : zzz = " + t_jsonitem.GetItem("zzz").CastToSingle().ToString());
 		}
 	}
+	#endif
 }
 
