@@ -18,10 +18,10 @@ namespace Samples.JsonItem.Convert.Editor
 			public float zzz;
 		}
 
-		/** シーンを開く。
+		/** テスト。
 		*/
 		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Test")]
-		private static void MenuItem_Sample_AssetLib_Convert_Test()
+		private static void MenuItem_Test()
 		{
 			Item t_from_item = new Item()
 			{

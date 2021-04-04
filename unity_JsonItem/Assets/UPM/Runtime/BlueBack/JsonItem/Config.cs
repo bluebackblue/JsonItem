@@ -18,7 +18,7 @@ namespace BlueBack.JsonItem
 		/** ERRORPROC
 		*/
 		#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-		public delegate void ErrorProcType(System.Exception a_text);
+		public delegate void ErrorProcType(System.Exception a_exception,string a_message);
 		public static ErrorProcType ERRORPROC = DebugTool.ErrorProc;
 		#endif
 
