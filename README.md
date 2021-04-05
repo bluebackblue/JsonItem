@@ -5,12 +5,17 @@ JSON操作
 MIT License
 * https://github.com/bluebackblue/JsonItem/blob/main/LICENSE
 
+## 外部依存 / 使用ライセンス等
+
+### サンプルのみ
+* https://github.com/bluebackblue/AssetLib
+
 ## 動作確認
 Unity 2020.2.4f1
 
 ## URL
 ### 最新
-* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.4
+* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.5
 ### 開発
 * https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM
 
