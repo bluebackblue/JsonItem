@@ -252,7 +252,15 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 				default:
 					{
 						if(a_to_type.IsEnum == true){
-							a_to_ref_object = System.Enum.Parse(a_to_type,a_from_jsonitem.GetStringData());
+							try{
+								a_to_ref_object = System.Enum.Parse(a_to_type,a_from_jsonitem.GetStringData());
+							}catch(System.SystemException t_exception){
+								//無効な値。
+
+								#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+								DebugTool.Assert(false,t_exception.Message + " : " + a_from_jsonitem.GetStringData() + " -> " + a_to_type.ToString());
+								#endif
+							}
 							return;
 						}else{
 							//失敗。

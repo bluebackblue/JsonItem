@@ -15,7 +15,7 @@ Unity 2020.2.4f1
 
 ## URL
 ### 最新
-* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.5
+* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.6
 ### 開発
 * https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM
 
