@@ -41,11 +41,12 @@ namespace BlueBack.JsonItem
 				case '\"':
 				case '\'':
 					{
-						int t_length = NormalizeJsonString.StringData.Normalize(a_jsonstring,t_index,a_jsonstring.Length,t_stringbuilder);
+						int t_length = JsonStringLength.StringData.GetLength(a_jsonstring,t_index,a_jsonstring.Length);
 						if(t_length > 0){
+							t_stringbuilder.Append(a_jsonstring.Substring(t_index,t_length));
 							t_index += t_length;
 						}else{
-							//ノーマライズに失敗。
+							//サイズの取得に失敗。
 
 							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
 							DebugTool.Assert(false);
