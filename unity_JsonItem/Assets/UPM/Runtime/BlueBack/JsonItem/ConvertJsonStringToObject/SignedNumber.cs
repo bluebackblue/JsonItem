@@ -7,17 +7,17 @@
 */
 
 
-/** BlueBack.JsonItem.ConvertFromJsonStringToObject
+/** BlueBack.JsonItem.ConvertJsonStringToObject
 */
-namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
+namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
-	/** Json文字列 ==> 符号なし整数。
+	/** Json文字列 ==> 符号あり整数。
 	*/
-	public class UnsignedNumber
+	public class SignedNumber
 	{
 		/** Convert
 		*/
-		public static void Convert(string a_in_jsonstring,out System.UInt64 a_out_value)
+		public static void Convert(string a_in_jsonstring,out System.Int32 a_out_value)
 		{
 			{
 				if(a_in_jsonstring.Length < 1){
@@ -38,8 +38,8 @@ namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
 					t_value = a_in_jsonstring;
 				}
 
-				System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
-				if(System.UInt64.TryParse(t_value,t_style,Config.CULTURE,out a_out_value) == true){
+				System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
+				if(System.Int32.TryParse(t_value,t_style,Config.CULTURE,out a_out_value) == true){
 					return;
 				}
 			}
@@ -56,7 +56,7 @@ namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
 
 		/** Convert
 		*/
-		public static void Convert(string a_in_jsonstring,out System.UInt32 a_out_value)
+		public static void Convert(string a_in_jsonstring,out System.Int64 a_out_value)
 		{
 			{
 				if(a_in_jsonstring.Length < 1){
@@ -77,8 +77,8 @@ namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
 					t_value = a_in_jsonstring;
 				}
 
-				System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
-				if(System.UInt32.TryParse(a_in_jsonstring,t_style,Config.CULTURE,out a_out_value) == true){
+				System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
+				if(System.Int64.TryParse(t_value,t_style,Config.CULTURE,out a_out_value) == true){
 					return;
 				}
 			}

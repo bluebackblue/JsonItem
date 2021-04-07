@@ -703,13 +703,13 @@ namespace BlueBack.JsonItem
 						this.value.ResetFromType(t_number_valuetype);
 						return;
 					}break;
-				case ValueType.Calc_BoolDataTrue:
+				case ValueType.Calc_TrueBoolData:
 					{
 						this.jsonstring = null;
 						this.value.Reset(true);
 						return;
 					}break;
-				case ValueType.Calc_BoolDataFalse:
+				case ValueType.Calc_FalseBoolData:
 					{
 						this.jsonstring = null;
 						this.value.Reset(false);
@@ -1135,7 +1135,7 @@ namespace BlueBack.JsonItem
 				case ValueType.StringData:
 					{
 						System.Text.StringBuilder t_stringbuilder = new System.Text.StringBuilder(this.jsonstring.Length);
-						ConvertFromJsonStringToObject.StringData.Convert(this.jsonstring,t_stringbuilder);
+						ConvertJsonStringToObject.StringData.Convert(this.jsonstring,t_stringbuilder);
 
 						this.value.raw = t_stringbuilder.ToString();
 						this.jsonstring = null;
@@ -1144,7 +1144,7 @@ namespace BlueBack.JsonItem
 				case ValueType.SignedNumber:
 					{
 						SIGNED_NUMBER_TYPE t_value;
-						ConvertFromJsonStringToObject.SignedNumber.Convert(this.jsonstring,out t_value);
+						ConvertJsonStringToObject.SignedNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1153,7 +1153,7 @@ namespace BlueBack.JsonItem
 				case ValueType.UnsignedNumber:
 					{
 						UNSIGNED_NUMBER_TYPE t_value;
-						ConvertFromJsonStringToObject.UnsignedNumber.Convert(this.jsonstring,out t_value);
+						ConvertJsonStringToObject.UnsignedNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1162,7 +1162,7 @@ namespace BlueBack.JsonItem
 				case ValueType.FloatingNumber:
 					{
 						FLOATING_NUMBER_TYPE t_value;
-						ConvertFromJsonStringToObject.FloatingNumber.Convert(this.jsonstring,out t_value);
+						ConvertJsonStringToObject.FloatingNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1171,7 +1171,7 @@ namespace BlueBack.JsonItem
 				case ValueType.IndexArray:
 					{
 						System.Collections.Generic.List<JsonItem> t_value = new System.Collections.Generic.List<JsonItem>(4 + this.jsonstring.Length / 7);
-						ConvertFromJsonStringToObject.IndexArray.Convert(this.jsonstring,t_value);
+						ConvertJsonStringToObject.IndexArray.Convert(this.jsonstring,t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1180,7 +1180,7 @@ namespace BlueBack.JsonItem
 				case ValueType.AssociativeArray:
 					{
 						System.Collections.Generic.Dictionary<string,JsonItem> t_value = new System.Collections.Generic.Dictionary<string,JsonItem>();
-						ConvertFromJsonStringToObject.AssociativeArray.Convert(this.jsonstring,t_value);
+						ConvertJsonStringToObject.AssociativeArray.Convert(this.jsonstring,t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1189,7 +1189,7 @@ namespace BlueBack.JsonItem
 				case ValueType.BoolData:
 					{
 						bool t_value;
-						ConvertFromJsonStringToObject.BoolData.Convert(this.jsonstring,out t_value);
+						ConvertJsonStringToObject.BoolData.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1198,7 +1198,7 @@ namespace BlueBack.JsonItem
 				case ValueType.DecimalNumber:
 					{
 						System.Decimal t_value;
-						ConvertFromJsonStringToObject.DecimalNumber.Convert(this.jsonstring,out t_value);
+						ConvertJsonStringToObject.DecimalNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;
@@ -1207,7 +1207,7 @@ namespace BlueBack.JsonItem
 				case ValueType.BinaryData:
 					{
 						System.Collections.Generic.List<byte> t_value = new System.Collections.Generic.List<byte>(4 + this.jsonstring.Length / 2);
-						ConvertFromJsonStringToObject.BinaryData.Convert(this.jsonstring,t_value);
+						ConvertJsonStringToObject.BinaryData.Convert(this.jsonstring,t_value);
 
 						this.value.raw = t_value;
 						this.jsonstring = null;

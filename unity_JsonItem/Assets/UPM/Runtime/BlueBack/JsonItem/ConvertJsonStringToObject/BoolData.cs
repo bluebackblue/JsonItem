@@ -7,9 +7,9 @@
 */
 
 
-/** BlueBack.JsonItem.ConvertFromJsonStringToObject
+/** BlueBack.JsonItem.ConvertJsonStringToObject
 */
-namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
+namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> 真偽データ。
 	*/

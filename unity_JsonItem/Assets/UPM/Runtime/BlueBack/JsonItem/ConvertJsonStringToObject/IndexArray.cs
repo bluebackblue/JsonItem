@@ -7,9 +7,9 @@
 */
 
 
-/** BlueBack.JsonItem.ConvertFromJsonStringToObject
+/** BlueBack.JsonItem.ConvertJsonStringToObject
 */
-namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
+namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> インデックス配列。
 	*/
@@ -70,38 +70,38 @@ namespace BlueBack.JsonItem.ConvertFromJsonStringToObject
 						switch(ValueType_FirstCharValueType.Get(a_in_jsonstring[t_index])){
 						case ValueType.StringData:
 							{
-								t_value_size = JsonStringLength.GetStringDataLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.StringData.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						case ValueType.Calc_UnknownNumber:
 						case ValueType.SignedNumber:
 						case ValueType.UnsignedNumber:
 						case ValueType.FloatingNumber:
 							{
-								t_value_size = JsonStringLength.GetNumberLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.Number.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						case ValueType.AssociativeArray:
 							{
-								t_value_size = JsonStringLength.GetAssociateArrayLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.AssociateArray.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						case ValueType.IndexArray:
 							{
-								t_value_size = JsonStringLength.GetIndexArrayLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.IndexArray.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
-						case ValueType.Calc_BoolDataTrue:
+						case ValueType.Calc_TrueBoolData:
 							{
-								t_value_size = JsonStringLength.GetBoolDataTrueLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.TrueBoolData.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
-						case ValueType.Calc_BoolDataFalse:
+						case ValueType.Calc_FalseBoolData:
 							{
-								t_value_size = JsonStringLength.GetBoolDataFalseLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.FalseBoolData.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						case ValueType.BinaryData:
 							{
-								t_value_size = JsonStringLength.GetBinaryDataLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.BinaryData.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						case ValueType.Null:
 							{
-								t_value_size = JsonStringLength.GetNullLength(a_in_jsonstring,t_index);
+								t_value_size = JsonStringLength.Null.GetLength(a_in_jsonstring,t_index,a_in_jsonstring.Length);
 							}break;
 						default:
 							{

@@ -41,12 +41,12 @@ namespace BlueBack.JsonItem
 			case 't':
 			case 'T':
 				{
-					return ValueType.Calc_BoolDataTrue;
+					return ValueType.Calc_TrueBoolData;
 				}break;
 			case 'f':
 			case 'F':
 				{
-					return ValueType.Calc_BoolDataFalse;
+					return ValueType.Calc_FalseBoolData;
 				}break;
 			case '-':
 			case '0':

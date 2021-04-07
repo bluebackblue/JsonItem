@@ -73,6 +73,25 @@ namespace Samples.JsonItem.Convert.Editor
 			E t_e2 = BlueBack.JsonItem.Convert.JsonItemToObject<E>(t_jsonitem.GetItem("e2"));
 			UnityEngine.Debug.Log("Direct : e2 = " + t_e2.ToString());
 		}
+
+		/** テスト。
+		*/
+		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Normalize")]
+		private static void MenuItem_Normalize()
+		{
+			string t_jsonstring = BlueBack.AssetLib.Editor.LoadText.LoadTextFromUrl("https://api.github.com/repos/bluebackblue/AssetLib/tags",null,System.Text.Encoding.GetEncoding("utf-8"));
+			UnityEngine.Debug.Log(t_jsonstring);
+
+			t_jsonstring = BlueBack.JsonItem.Normalize.Convert(t_jsonstring);
+			UnityEngine.Debug.Log(t_jsonstring);
+
+			BlueBack.JsonItem.JsonItem t_jsonitem = new BlueBack.JsonItem.JsonItem(t_jsonstring);
+
+			int ii_max = t_jsonitem.GetListMax();
+			for(int ii=0;ii<ii_max;ii++){
+				UnityEngine.Debug.Log(t_jsonitem.GetItem(ii).GetItem("name").GetStringData());
+			}
+		}
 	}
 	#endif
 }

@@ -92,11 +92,11 @@ namespace BlueBack.JsonItem
 
 		/** 中間計算用。真。
 		*/
-		Calc_BoolDataTrue = 32768 + 2,
+		Calc_TrueBoolData = 32768 + 2,
 
 		/** 中間計算用。偽。
 		*/
-		Calc_BoolDataFalse = 32768 + 3,
+		Calc_FalseBoolData = 32768 + 3,
 
 		/** Mask
 		*/
