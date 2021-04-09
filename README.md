@@ -1,19 +1,20 @@
 # BlueBack.JsonItem
 JSON操作
+* JSONのロード、セーブ
+* PrittyからのNormalize
 
 ## ライセンス
 MIT License
 * https://github.com/bluebackblue/JsonItem/blob/main/LICENSE
 
 ## 外部依存 / 使用ライセンス等
-
 ### サンプルのみ
 * https://github.com/bluebackblue/AssetLib
 
 ## 動作確認
-Unity 2020.2.4f1
+Unity 2020.2.0b14
 
-## URL
+## UPM
 ### 最新
 * https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.6
 ### 開発
@@ -24,15 +25,13 @@ Unity 2020.2.4f1
 * メニュー選択：「Window->Package Manager」
 * ボタン選択：「左上の＋ボタン」
 * リスト選択：「Add package from git URL...」
-* 上記のURLを追加「 https://github.com/～～/UPM#バージョン 」
-
+* 上記UPMのURLを追加「 https://github.com/～～/UPM#バージョン 」
 ### 注
 Gitクライアントがインストールされている必要がある。
 * https://docs.unity3d.com/ja/current/Manual/upm-git.html
 * https://git-scm.com/
 
-## サンプル
-
+## 例
 ```
 /** Item
 */
@@ -43,7 +42,6 @@ public struct Item
 	public float zzz;
 }
 ```
-
 ```
 {
 	//JsonItemにコンバート。
