@@ -15,6 +15,10 @@ public class Setting
 	*/
 	public const string AUTHOR_NAME = "BlueBack";
 
+	/** AUTHOR_URL
+	*/
+	public const string AUTHOR_URL = "https://github.com/bluebackblue";
+
 	/** PACKAGE_NAME
 	*/
 	public const string PACKAGE_NAME = "JsonItem";
@@ -31,6 +35,25 @@ public class Setting
 	*/
 	public static readonly string[] PACKAGEJSON_KEYWORD = new string[]{
 		"json"
+	};
+
+	/** CHANGELOG
+	*/
+	public static string[] CHANGELOG = new string[]{
+		"# Changelog",
+		"",
+
+		/*
+		"## [0.0.0] - 0000-00-00",
+		"### Changes",
+		"- Init",
+		"",
+		*/
+
+		"## [0.0.1] - 2021-03-29",
+		"### Changes",
+		"- Init",
+		"",
 	};
 
 	/** GetPackageVersion
@@ -72,7 +95,7 @@ public class Setting
 			return new string[]{
 				"## ライセンス",
 				"MIT License",
-				"* https://github.com/bluebackblue/" + PACKAGE_NAME + "/blob/main/LICENSE",
+				"* " + AUTHOR_URL + "/" + PACKAGE_NAME + "/blob/main/LICENSE",
 			};
 		},
 
@@ -81,8 +104,9 @@ public class Setting
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
 				"## 外部依存 / 使用ライセンス等",
+				//"* " + AUTHOR_URL + "/" + "AssetLib",
 				"### サンプルのみ",
-				"* https://github.com/bluebackblue/AssetLib",
+				"* " + AUTHOR_URL + "/" + "AssetLib",
 			};
 		},
 
@@ -101,9 +125,9 @@ public class Setting
 			return new string[]{
 				"## UPM",
 				"### 最新",
-				"* https://github.com/bluebackblue/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM#" + a_argument.version,
+				"* " + AUTHOR_URL + "/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM#" + a_argument.version,
 				"### 開発",
-				"* https://github.com/bluebackblue/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM",
+				"* " + AUTHOR_URL + "/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM",
 			};
 		},
 
