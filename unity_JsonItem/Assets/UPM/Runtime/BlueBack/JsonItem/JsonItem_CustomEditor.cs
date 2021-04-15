@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** JsonItem_CustomEditor
 	*/
-	[UnityEditor.CustomEditor(typeof(JsonItemViewer_MonoBehaviour),true)]
+	[UnityEditor.CustomEditor(typeof(InspectorViewer_MonoBehaviour),true)]
 	public class JsonItem_CustomEditor : UnityEditor.Editor
 	{
 		/** expanded
@@ -53,7 +53,7 @@ namespace BlueBack.JsonItem
 		{
 			base.OnInspectorGUI();
 
-			JsonItemViewer_MonoBehaviour t_this = this.target as JsonItemViewer_MonoBehaviour;
+			InspectorViewer_MonoBehaviour t_this = this.target as InspectorViewer_MonoBehaviour;
 
 			UnityEditor.EditorGUILayout.Space(18);
 

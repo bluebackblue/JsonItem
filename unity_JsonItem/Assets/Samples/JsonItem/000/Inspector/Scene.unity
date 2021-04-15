@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonstring_1: '{"aiueo":<E38182E38184E38186E38188E3818AE38182E38184E38186E38188E3818A>}'
-  jsonstring_2: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
+  jsonstring_2: null
   jsonstring_3: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
 --- !u!4 &2654063492252212475
 Transform:
