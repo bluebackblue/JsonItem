@@ -56,7 +56,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 						byte t_binary_2;
 						StringConvertTool.HexStringToByte.Convert_NoCheck(a_in_jsonstring[t_index + 0],out t_binary_1);
 						StringConvertTool.HexStringToByte.Convert_NoCheck(a_in_jsonstring[t_index + 1],out t_binary_2);
-						byte t_binary = (byte)(t_binary_1 << 8 | t_binary_2);
+						byte t_binary = (byte)(t_binary_1 << 4 | t_binary_2);
 
 						//リストに追加。
 						a_out_list.Add(t_binary);

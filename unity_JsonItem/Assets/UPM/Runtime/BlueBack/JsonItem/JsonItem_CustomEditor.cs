@@ -141,7 +141,32 @@ namespace BlueBack.JsonItem
 					}break;
 				case BlueBack.JsonItem.ValueType.BinaryData:
 					{
-						UnityEditor.EditorGUILayout.LabelField("BinaryData","---");
+						System.Collections.Generic.List<byte> t_list = a_jsonitem.GetBinaryData();
+
+						string t_name;
+						if(a_name != null){
+							t_name = a_name + " : BinaryData(" + t_list.Count.ToString() + ")";
+						}else{
+							t_name = "BinaryData(" + t_list.Count.ToString() + ")";
+						}
+
+						if(this.SetExpanded(a_address,UnityEditor.EditorGUILayout.Foldout(this.GetExpanded(a_address),t_name)) == true){
+							UnityEditor.EditorGUI.indentLevel++;
+							System.Text.StringBuilder t_stringbuilder = new System.Text.StringBuilder(32);
+
+							int t_index=0;
+							while(t_index<t_list.Count){
+								t_stringbuilder.Clear();
+								for(int ii=t_index;((ii<t_list.Count)&&(ii<t_index + 16));ii++){
+									t_stringbuilder.Append(t_list[ii].ToString("X2"));
+									t_stringbuilder.Append(" ");
+								}
+								UnityEditor.EditorGUILayout.LabelField(t_stringbuilder.ToString());
+								t_index += 16;
+							}
+
+							UnityEditor.EditorGUI.indentLevel--;
+						}
 					}break;
 				case BlueBack.JsonItem.ValueType.StringData:
 					{

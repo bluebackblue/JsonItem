@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4a1ad9a0277fb4f989ce741825464c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonstring: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
+  jsonstring_1: '{"aiueo":<E38182E38184E38186E38188E3818A>}'
+  jsonstring_2: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
+  jsonstring_3: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'

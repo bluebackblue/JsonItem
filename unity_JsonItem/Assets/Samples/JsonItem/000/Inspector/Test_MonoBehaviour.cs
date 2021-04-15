@@ -6,7 +6,7 @@ public class Test_MonoBehaviour : BlueBack.JsonItem.JsonItemViewer_MonoBehaviour
 {
 	/** jsonstring
 	*/
-	public string jsonstring_1 = "[[\"value\",{\"aaa\":\"xxx\",\"bbb\":{\"abc\":\"xyz\"}},3],-1,1,0.001f,true,null,-3m,\"x\"]";
+	public string jsonstring_1 = "{\"aiueo\":<E38182E38184E38186E38188E3818AE38182E38184E38186E38188E3818A>}";
 	public string jsonstring_2 = "[[\"value\",{\"aaa\":\"xxx\",\"bbb\":{\"abc\":\"xyz\"}},3],-1,1,0.001f,true,null,-3m,\"x\"]";
 	public string jsonstring_3 = "[[\"value\",{\"aaa\":\"xxx\",\"bbb\":{\"abc\":\"xyz\"}},3],-1,1,0.001f,true,null,-3m,\"x\"]";
 
