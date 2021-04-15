@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7658828788082726790}
-  - component: {fileID: 5484405153314671676}
+  - component: {fileID: 399073281106004302}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5484405153314671676
+--- !u!114 &399073281106004302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4a1ad9a0277fb4f989ce741825464c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonstring_1: '{"aiueo":<E38182E38184E38186E38188E3818A>}'
+  jsonstring_1: '{"aiueo":<E38182E38184E38186E38188E3818AE38182E38184E38186E38188E3818A>}'
   jsonstring_2: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
   jsonstring_3: '[["value",{"aaa":"xxx","bbb":{"abc":"xyz"}},3],-1,1,0.001f,true,null,-3m,"x"]'
