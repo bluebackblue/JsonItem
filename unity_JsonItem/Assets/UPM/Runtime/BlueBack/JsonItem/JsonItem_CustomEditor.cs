@@ -3,7 +3,7 @@
 /**
  * Copyright (c) blueback
  * Released under the MIT License
- * @brief MonoBehaviour。
+ * @brief CustomEditor。
 */
 
 
@@ -51,6 +51,8 @@ namespace BlueBack.JsonItem
 		*/
 		public override void OnInspectorGUI()
 		{
+			base.OnInspectorGUI();
+
 			JsonItemViewer_MonoBehaviour t_this = this.target as JsonItemViewer_MonoBehaviour;
 
 			BlueBack.JsonItem.JsonItem t_jsonitem = t_this.GetJsonItem();

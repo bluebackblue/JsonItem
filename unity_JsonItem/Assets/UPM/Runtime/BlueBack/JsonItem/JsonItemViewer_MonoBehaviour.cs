@@ -15,7 +15,7 @@ namespace BlueBack.JsonItem
 	*/
 	public abstract class JsonItemViewer_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
-		/** 表示するJsonItemの取得。
+		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
 		*/
 		public abstract BlueBack.JsonItem.JsonItem GetJsonItem();
 	}
