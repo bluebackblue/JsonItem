@@ -85,7 +85,8 @@ public class Setting
 				"# " + AUTHOR_NAME + "." + PACKAGE_NAME,
 				"JSON操作",
 				"* JSONのロード、セーブ",
-				"* PrittyからのNormalize",
+				"* PrittyをNormalize",
+				"* JSONをInspectorに表示",
 			};
 		},
 
