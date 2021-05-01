@@ -9,6 +9,7 @@
 
 /** BlueBack.JsonItem
 */
+#if(UNITY_EDITOR)
 namespace BlueBack.JsonItem
 {
 	/** JsonItem_CustomEditor
@@ -221,4 +222,5 @@ namespace BlueBack.JsonItem
 		}
 	}
 }
+#endif
 
