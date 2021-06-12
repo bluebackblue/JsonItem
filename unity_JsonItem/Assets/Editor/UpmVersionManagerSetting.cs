@@ -37,7 +37,7 @@ namespace Editor
 				t_param.package_name = "JsonItem";
 
 				//■getpackageversion
-				t_param.getpackageversion = BlueBack.AssetLib.Version.GetPackageVersion;
+				t_param.getpackageversion = BlueBack.JsonItem.Version.GetPackageVersion;
 
 				//packagejson_unity
 				t_param.packagejson_unity = "2020.1";
