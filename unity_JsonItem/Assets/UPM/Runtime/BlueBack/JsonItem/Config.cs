@@ -22,6 +22,13 @@ namespace BlueBack.JsonItem
 		public static ErrorProcType ERRORPROC = DebugTool.ErrorProc;
 		#endif
 
+		/** LOGPROC
+		*/
+		#if(DEF_BLUEBACK_JSONITEM_LOG)
+		public delegate void LogProcType(string a_message);
+		public static LogProcType LOGPROC = DebugTool.LogProc;
+		#endif
+
 		/** プール数。最大値。
 		*/
 		public static int POOL_MAX = 1024;
