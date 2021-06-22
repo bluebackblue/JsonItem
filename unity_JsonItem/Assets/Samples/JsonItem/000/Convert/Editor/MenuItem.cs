@@ -79,13 +79,16 @@ namespace Samples.JsonItem.Convert.Editor
 		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Normalize")]
 		private static void MenuItem_Normalize()
 		{
-			string t_jsonstring = BlueBack.AssetLib.Editor.LoadText.LoadTextFromUrl("https://api.github.com/repos/bluebackblue/AssetLib/tags",null,System.Text.Encoding.GetEncoding("utf-8"));
-			UnityEngine.Debug.Log(t_jsonstring);
+			string t_jsonstring_raw = BlueBack.AssetLib.Editor.LoadText.LoadTextFromUrl("https://api.github.com/repos/bluebackblue/AssetLib/tags",null,System.Text.Encoding.GetEncoding("utf-8"));
+			UnityEngine.Debug.Log(t_jsonstring_raw);
 
-			t_jsonstring = BlueBack.JsonItem.Normalize.Convert(t_jsonstring);
-			UnityEngine.Debug.Log(t_jsonstring);
+			string t_jsonstring_normalize = BlueBack.JsonItem.Normalize.Convert(t_jsonstring_raw);
+			UnityEngine.Debug.Log(t_jsonstring_normalize);
 
-			BlueBack.JsonItem.JsonItem t_jsonitem = new BlueBack.JsonItem.JsonItem(t_jsonstring);
+			string t_jsonstring_pretty = BlueBack.JsonItem.Pretty.Convert(t_jsonstring_normalize,"\t");
+			UnityEngine.Debug.Log(t_jsonstring_pretty);
+
+			BlueBack.JsonItem.JsonItem t_jsonitem = new BlueBack.JsonItem.JsonItem(t_jsonstring_normalize);
 
 			int ii_max = t_jsonitem.GetListMax();
 			for(int ii=0;ii<ii_max;ii++){
