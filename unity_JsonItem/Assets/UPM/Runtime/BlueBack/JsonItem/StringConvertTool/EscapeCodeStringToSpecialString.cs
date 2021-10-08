@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 		"\\n" ==> "\n"
 
 	*/
-	public class EscapeCodeStringToSpecialString
+	public static class EscapeCodeStringToSpecialString
 	{
 		/** Convert
 		*/

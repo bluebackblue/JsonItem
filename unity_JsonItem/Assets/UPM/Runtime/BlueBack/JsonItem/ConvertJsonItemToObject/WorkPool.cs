@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 {
 	/** WorkPool
 	*/
-	public class WorkPool
+	public sealed class WorkPool
 	{
 		/** ModeSetList
 

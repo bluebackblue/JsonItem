@@ -20,7 +20,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 		ValueType.BoolData:
 
 	*/
-	public class FromNumber
+	public static class FromNumber
 	{
 		/** Convert
 		*/

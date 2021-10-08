@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonString
 {
 	/** インデックス配列 ==> Json文字列。
 	*/
-	public class IndexArray
+	public static class IndexArray
 	{
 		/** Convert
 		*/

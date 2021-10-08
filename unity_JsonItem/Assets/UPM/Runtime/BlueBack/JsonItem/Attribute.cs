@@ -13,19 +13,19 @@ namespace BlueBack.JsonItem
 {
 	/** コンバート時に除外する。
 	*/
-	public class Ignore : System.Attribute
+	public sealed class Ignore : System.Attribute
 	{
 	}
 
 	/** Enumを文字データとして出力する。
 	*/
-	public class EnumString : System.Attribute
+	public sealed class EnumString : System.Attribute
 	{
 	}
 
 	/** Enumを数値として出力する。
 	*/
-	public class EnumInt : System.Attribute
+	public sealed class EnumInt : System.Attribute
 	{
 	}
 }

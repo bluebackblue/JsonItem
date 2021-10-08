@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 {
 	/** 文字データ。
 	*/
-	public class StringData
+	public static class StringData
 	{
 		/** GetLength
 		*/

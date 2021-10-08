@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 {
 	/** 連想配列。
 	*/
-	public class AssociateArray
+	public static class AssociateArray
 	{
 		/** GetLength
 		*/

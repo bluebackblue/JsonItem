@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 		"3040" ==> "あ"
 
 	*/
-	public class Utf16CodeStringToChar
+	public static class Utf16CodeStringToChar
 	{
 		/** BUFFER_FROM
 		*/

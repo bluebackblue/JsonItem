@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** ConvertTool
 	*/
-	public class ConvertTool
+	public static class ConvertTool
 	{
 		/** メンバーリスト。取得。
 

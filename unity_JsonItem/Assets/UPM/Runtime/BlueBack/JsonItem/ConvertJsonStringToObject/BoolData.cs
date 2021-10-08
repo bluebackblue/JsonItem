@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> 真偽データ。
 	*/
-	public class BoolData
+	public static class BoolData
 	{
 		/** Convert
 		*/

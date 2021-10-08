@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 {
 	/** True真偽データ。
 	*/
-	public class TrueBoolData
+	public static class TrueBoolData
 	{
 		/** TRUE
 		*/

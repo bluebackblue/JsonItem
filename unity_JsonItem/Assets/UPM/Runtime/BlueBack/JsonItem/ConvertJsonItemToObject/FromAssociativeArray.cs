@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 		ValueType.AssociativeArray
 
 	*/
-	public class FromAssociativeArray
+	public static class FromAssociativeArray
 	{
 		/** Convert
 		*/

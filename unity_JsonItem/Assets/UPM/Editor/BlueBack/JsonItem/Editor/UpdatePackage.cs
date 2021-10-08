@@ -15,7 +15,7 @@ namespace BlueBack.JsonItem.Editor
 	/** UpdatePackage
 	*/
 	#if(!DEF_USER_BLUEBACK_JSONITEM)
-	public class UpdatePackage
+	public static class UpdatePackage
 	{
 		/** MenuItem_BlueBack_JsonItem_UpdatePackage
 		*/

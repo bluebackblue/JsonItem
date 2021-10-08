@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> 符号なし整数。
 	*/
-	public class UnsignedNumber
+	public static class UnsignedNumber
 	{
 		/** Convert
 		*/

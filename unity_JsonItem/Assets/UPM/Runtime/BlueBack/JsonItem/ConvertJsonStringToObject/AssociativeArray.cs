@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> 連想配列。
 	*/
-	public class AssociativeArray
+	public static class AssociativeArray
 	{
 		/** Convert
 		*/

@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** 最初の一文字からタイプを推測。
 	*/
-	public class ValueType_FirstCharValueType
+	public static class ValueType_FirstCharValueType
 	{
 		/** Get
 		*/

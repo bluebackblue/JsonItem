@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ReflectionTool
 {
 	/** ReflectionTool
 	*/
-	public class ReflectionTool
+	public static class ReflectionTool
 	{
 		/** メンバーリスト。取得。
 

@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** 数値のタイプを取得。
 	*/
-	public class ValueType_NumverValueType
+	public static class ValueType_NumverValueType
 	{
 		/** Get
 		*/

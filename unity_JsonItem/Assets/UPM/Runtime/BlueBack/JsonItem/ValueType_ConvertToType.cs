@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** JsonItemからコンバート先の型を決める
 	*/
-	public class ValueType_ConvertToType
+	public static class ValueType_ConvertToType
 	{
 		/** Get
 		*/

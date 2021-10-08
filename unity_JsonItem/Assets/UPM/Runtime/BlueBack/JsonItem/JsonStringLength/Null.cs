@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 {
 	/** Null。
 	*/
-	public class Null
+	public static class Null
 	{
 		/** NULL。
 		*/

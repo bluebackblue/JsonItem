@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 		ValueType.IndexArray
 
 	*/
-	public class FromIndexArray
+	public static class FromIndexArray
 	{
 		/** Convert
 		*/

@@ -19,7 +19,7 @@ namespace BlueBack.JsonItem
 
 	/** JsonItem
 	*/
-	public class JsonItem
+	public sealed class JsonItem
 	{
 		/** ＪＳＯＮ文字列。
 		*/

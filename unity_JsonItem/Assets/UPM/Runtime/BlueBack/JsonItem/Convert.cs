@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** Convert
 	*/
-	public class Convert
+	public static class Convert
 	{
 		/** オブジェクト => JsonItem。
 		*/
@@ -127,6 +127,20 @@ namespace BlueBack.JsonItem
 				return t_jsonitem.ConvertToObject<Type>();
 			}
 			return default(Type);
+		}
+
+		/** コンバート。正規化。
+		*/
+		public static string ConvertToNormailze(string a_jsonstring)
+		{
+			return Normalize.Convert(a_jsonstring);
+		}
+
+		/** コンバート。表示成型。
+		*/
+		public static string ConvertToPretty(string a_jsonstring,string a_neststring)
+		{
+			return Pretty.Convert(a_jsonstring,a_neststring);
 		}
 	}
 }

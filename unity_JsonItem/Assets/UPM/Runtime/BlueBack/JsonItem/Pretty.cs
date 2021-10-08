@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** Pretty
 	*/
-	public class Pretty
+	public static class Pretty
 	{
 		/** Convert
 		*/

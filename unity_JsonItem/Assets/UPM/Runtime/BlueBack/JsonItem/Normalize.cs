@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** Normalize
 	*/
-	public class Normalize
+	public static class Normalize
 	{
 		/** Convert
 		*/

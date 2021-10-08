@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonString
 {
 	/** 浮動小数 ==> Json文字列。
 	*/
-	public class FloatingNumber
+	public static class FloatingNumber
 	{
 		/** Convert
 		*/

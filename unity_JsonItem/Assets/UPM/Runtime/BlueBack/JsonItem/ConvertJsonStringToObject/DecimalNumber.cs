@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 {
 	/** Json文字列 ==> １０進数の浮動小数点数。
 	*/
-	public class DecimalNumber
+	public static class DecimalNumber
 	{
 		/** Convert
 		*/

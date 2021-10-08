@@ -10,12 +10,12 @@
 /** BlueBack.JsonItem
 */
 #if(UNITY_EDITOR)
-namespace BlueBack.JsonItem
+namespace BlueBack.JsonItem.Editor
 {
 	/** JsonItem_CustomEditor
 	*/
 	[UnityEditor.CustomEditor(typeof(InspectorViewer_MonoBehaviour),true)]
-	public class JsonItem_CustomEditor : UnityEditor.Editor
+	public sealed class JsonItem_CustomEditor : UnityEditor.Editor
 	{
 		/** expanded
 		*/

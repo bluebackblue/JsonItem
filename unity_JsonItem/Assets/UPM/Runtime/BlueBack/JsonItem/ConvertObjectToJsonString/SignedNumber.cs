@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonString
 {
 	/** 符号あり整数 ==> Json文字列。
 	*/
-	public class SignedNumber
+	public static class SignedNumber
 	{
 		/** Convert
 		*/

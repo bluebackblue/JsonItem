@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** Config
 	*/
-	public class Config
+	public static class Config
 	{
 		/** プール数。最大値。
 		*/

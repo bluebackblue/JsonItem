@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 {
 	/** WorkPool_Item
 	*/
-	public class WorkPool_Item
+	public sealed class WorkPool_Item
 	{
 		/** モード。
 		*/

@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 {
 	/** FromClass
 	*/
-	public class FromClass
+	public static class FromClass
 	{
 		/** Convert
 		*/

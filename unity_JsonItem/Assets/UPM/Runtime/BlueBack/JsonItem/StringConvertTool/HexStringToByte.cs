@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 		"F" ==> 15
 
 	*/
-	public class HexStringToByte
+	public static class HexStringToByte
 	{
 		/** TABLE
 		*/

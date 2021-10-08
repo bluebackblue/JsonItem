@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 {
 	/** インスタンス作成。
 	*/
-	public class CreateInstance
+	public static class CreateInstance
 	{
 		/** Create
 		*/

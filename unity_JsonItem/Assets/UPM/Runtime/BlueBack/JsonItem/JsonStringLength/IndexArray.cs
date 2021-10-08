@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 {
 	/** インデックス配列。
 	*/
-	public class IndexArray
+	public static class IndexArray
 	{
 		/** GetLength
 		*/

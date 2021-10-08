@@ -16,7 +16,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 		ValueType.StringData
 
 	*/
-	public class FromStringData
+	public static class FromStringData
 	{
 		/** Convert
 		*/
