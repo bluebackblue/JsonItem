@@ -6,24 +6,24 @@ JSON操作
 
 ## ライセンス
 MIT License
-* https://github.com/bluebackblue/JsonItem/blob/main/LICENSE
+* https://github.com/bluebackblue/UpmJsonItem/blob/main/LICENSE
 
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
-* https://github.com/bluebackblue/JsonItem
+* https://github.com/bluebackblue/UpmJsonItem
 ### サンプル
-* https://github.com/bluebackblue/JsonItem
-* https://github.com/bluebackblue/AssetLib
+* https://github.com/bluebackblue/UpmJsonItem
+* https://github.com/bluebackblue/UpmAssetLib
 
 ## 動作確認
 Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.21
+* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM#0.0.22
 ### 開発
-* https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM
+* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM
 
 ## Unityへの追加方法
 * Unity起動
