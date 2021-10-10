@@ -28,9 +28,9 @@ namespace BlueBack.JsonItem.Editor
 				DebugTool.EditorLogError("GetLastReleaseNameFromGitHub : connect error");
 				#endif
 			}else if(t_version.Length <= 0){
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM");
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/JsonItem.git?path=BlueBackJsonItem/Assets/UPM");
 			}else{
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#" + t_version);
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/JsonItem.git?path=BlueBackJsonItem/Assets/UPM#" + t_version);
 			}
 		}
 
