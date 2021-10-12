@@ -1,0 +1,60 @@
+{
+    "namespace_author":"BlueBack",
+    "namespace_package":"JsonItem",
+    "git_url":"https://github.com/bluebackblue/UpmJsonItem",
+    "git_api":"https://api.github.com/repos/bluebackblue/UpmJsonItem",
+    "git_path":"BlueBackJsonItem/Assets/UPM",
+    "discription_simple":"JSON操作",
+    "discription_detal":[
+        "JSON操作",
+        "* JSONのロード、セーブ",
+        "* PrittyをNormalize",
+        "* JSONをInspectorに表示"
+    ],
+    "keyword":[
+        "json"
+    ],
+    "changelog":[
+        "# Changelog",
+        "",
+        "## [0.0.0] - 2021-03-29",
+        "### Changes",
+        "- Init",
+        ""
+    ],
+    "root_readmemd_path":"../../README.md",
+    "need_unity_version":"2020.1",
+    "asmdef_runtime":{
+        "define_list":[
+        ],
+        "reference_list":[
+        ]
+    },
+    "asmdef_editor":{
+        "define_list":[
+        ],
+        "reference_list":[
+            {
+                "use":"use",
+                "package_fullname":"BlueBack.JsonItem",
+                "url":"https://github.com/bluebackblue/UpmJsonItem"
+            }
+        ]
+    },
+    "asmdef_sample":{
+        "define_list":[
+        ],
+        "reference_list":[
+            {
+                "use":"use",
+                "package_fullname":"BlueBack.AssetLib.Editor",
+                "url":"https://github.com/bluebackblue/UpmAssetLib"
+            },
+            {
+                "use":"use",
+                "package_fullname":"BlueBack.JsonItem",
+                "url":"https://github.com/bluebackblue/UpmJsonItem"
+            }
+        ]
+    }
+}
