@@ -252,6 +252,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 				default:
 					{
 						if(a_to_type.IsEnum == true){
+							#pragma warning disable 0168
 							try{
 								a_to_ref_object = System.Enum.Parse(a_to_type,a_from_jsonitem.GetStringData());
 							}catch(System.SystemException t_exception){
@@ -261,6 +262,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 								DebugTool.Assert(false,t_exception.Message + " : " + a_from_jsonitem.GetStringData() + " -> " + a_to_type.ToString());
 								#endif
 							}
+							#pragma warning restore 0168
 							return;
 						}else{
 							//失敗。
