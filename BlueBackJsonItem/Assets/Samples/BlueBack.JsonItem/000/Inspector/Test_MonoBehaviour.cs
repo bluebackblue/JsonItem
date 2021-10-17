@@ -6,7 +6,11 @@ namespace Samples.JsonItem.Convert
 {
 	/** Test_MonoBehaviour
 	*/
+	#if(UNITY_EDITOR)
 	public class Test_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
+	#else
+	public class Test_MonoBehaviour : UnityEngine.MonoBehaviour
+	#endif
 	{
 		/** jsonstring
 		*/
