@@ -18,21 +18,14 @@ namespace BlueBack.JsonItem
 		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
 		*/
 		#if(UNITY_EDITOR)
-		public virtual BlueBack.JsonItem.JsonItem GetJsonItem()
-		{
-			return null;
-		}
+		public abstract BlueBack.JsonItem.JsonItem GetJsonItem();
 		#endif
 
 		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
 		*/
 		#if(UNITY_EDITOR)
-		public virtual BlueBack.JsonItem.JsonItem[] GetMultiJsonItem()
-		{
-			return null;
-		}
+		public abstract BlueBack.JsonItem.JsonItem[] GetMultiJsonItem();
 		#endif
 	}
 }
-
 

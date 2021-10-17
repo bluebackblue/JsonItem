@@ -1,8 +1,8 @@
 
 
-/** Samples.JsonItem.Convert.Editor
+/** Samples.JsonItem.Convert
 */
-namespace Samples.JsonItem.Convert.Editor
+namespace Samples.JsonItem.Convert
 {
 	/** MenuItem
 	*/
@@ -33,9 +33,9 @@ namespace Samples.JsonItem.Convert.Editor
 			public E e2;
 		}
 
-		/** テスト。
+		/** JsonItemToObject
 		*/
-		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Test")]
+		[UnityEditor.MenuItem("サンプル/BlueBack.JsonItem/Convert/JsonItemToObject")]
 		private static void MenuItem_Test()
 		{
 			Item t_from_item = new Item()
@@ -55,7 +55,7 @@ namespace Samples.JsonItem.Convert.Editor
 			UnityEngine.Debug.Log("ConvertToJsonString : " + t_jsonstring);
 
 			//オブジェクトにコンバート。
-			Item t_to_item = t_jsonitem.ConvertToObject<Item>();
+			Item t_to_item = BlueBack.JsonItem.Convert.JsonItemToObject<Item>(t_jsonitem);
 			UnityEngine.Debug.Log("ConvertToObject : x = " + t_to_item.x.ToString());
 			UnityEngine.Debug.Log("ConvertToObject : yy = " + t_to_item.yy.ToString());
 			UnityEngine.Debug.Log("ConvertToObject : zzz = " + t_to_item.zzz.ToString());
@@ -74,12 +74,12 @@ namespace Samples.JsonItem.Convert.Editor
 			UnityEngine.Debug.Log("Direct : e2 = " + t_e2.ToString());
 		}
 
-		/** テスト。
+		/** Normalize
 		*/
-		[UnityEditor.MenuItem("サンプル/JsonItem/Convert/Normalize")]
+		[UnityEditor.MenuItem("サンプル/BlueBack.JsonItem/Convert/Normalize")]
 		private static void MenuItem_Normalize()
 		{
-			string t_jsonstring_raw = BlueBack.AssetLib.Editor.LoadText.LoadTextFromUrl("https://api.github.com/repos/bluebackblue/AssetLib/tags",null,System.Text.Encoding.GetEncoding("utf-8"));
+			string t_jsonstring_raw = BlueBack.AssetLib.Editor.LoadTextWithUrl.LoadNoBomUtf8("https://api.github.com/repos/bluebackblue/AssetLib/tags",null);
 			UnityEngine.Debug.Log(t_jsonstring_raw);
 
 			string t_jsonstring_normalize = BlueBack.JsonItem.Normalize.Convert(t_jsonstring_raw);
