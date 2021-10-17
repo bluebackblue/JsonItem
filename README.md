@@ -21,7 +21,7 @@ Unity 2021.2.0b9
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM#0.0.26
+* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM#0.0.27
 ### 開発
 * https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM
 
