@@ -1,9 +1,9 @@
 
 
 /**
- * Copyright (c) blueback
- * Released under the MIT License
- * @brief ＪＳＯＮ。
+	Copyright (c) blueback
+	Released under the MIT License
+	@brief ＪＳＯＮ。
 */
 
 
