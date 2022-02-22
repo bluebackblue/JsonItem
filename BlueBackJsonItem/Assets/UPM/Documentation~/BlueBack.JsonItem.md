@@ -1,7 +1,7 @@
 # BlueBack.JsonItem
 JSON操作
 * JSONのロード、セーブ
-* PrittyをNormalize
+* 整形(Pritty/Normalize)
 * JSONをInspectorに表示
 
 ## ライセンス
