@@ -1,15 +1,15 @@
 
 
-/** Samples.JsonItem.Convert
+/** BlueBack.JsonItem.Samples.Inspector
 */
-namespace Samples.JsonItem.Convert
+namespace BlueBack.JsonItem.Samples.Inspector
 {
-	/** Test_MonoBehaviour
+	/** Viewer_MonoBehaviour
 	*/
 	#if(UNITY_EDITOR)
-	public class Test_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
+	public class Viewer_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
 	#else
-	public class Test_MonoBehaviour : UnityEngine.MonoBehaviour
+	public class Viewer_MonoBehaviour : UnityEngine.MonoBehaviour
 	#endif
 	{
 		/** jsonstring

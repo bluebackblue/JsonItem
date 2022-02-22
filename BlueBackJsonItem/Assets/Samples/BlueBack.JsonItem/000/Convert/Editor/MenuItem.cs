@@ -1,8 +1,8 @@
 
 
-/** Samples.JsonItem.Convert
+/** BlueBack.JsonItem.Samples.Convert.Editor
 */
-namespace Samples.JsonItem.Convert
+namespace BlueBack.JsonItem.Samples.Convert.Editor
 {
 	/** MenuItem
 	*/
@@ -35,7 +35,7 @@ namespace Samples.JsonItem.Convert
 
 		/** JsonItemToObject
 		*/
-		[UnityEditor.MenuItem("サンプル/BlueBack.JsonItem/Convert/JsonItemToObject")]
+		[UnityEditor.MenuItem("Samples/BlueBack.JsonItem/Convert/JsonItemToObject")]
 		private static void MenuItem_Test()
 		{
 			Item t_from_item = new Item()
@@ -76,15 +76,17 @@ namespace Samples.JsonItem.Convert
 
 		/** Normalize
 		*/
-		[UnityEditor.MenuItem("サンプル/BlueBack.JsonItem/Convert/Normalize")]
+		[UnityEditor.MenuItem("Samples/BlueBack.JsonItem/Convert/Normalize")]
 		private static void MenuItem_Normalize()
 		{
 			string t_jsonstring_raw = BlueBack.AssetLib.Editor.LoadTextWithUrl.LoadNoBomUtf8("https://api.github.com/repos/bluebackblue/AssetLib/tags",null);
 			UnityEngine.Debug.Log(t_jsonstring_raw);
 
+			//空白、タブ、改行を省く。
 			string t_jsonstring_normalize = BlueBack.JsonItem.Normalize.Convert(t_jsonstring_raw);
 			UnityEngine.Debug.Log(t_jsonstring_normalize);
 
+			//整形。
 			string t_jsonstring_pretty = BlueBack.JsonItem.Pretty.Convert(t_jsonstring_normalize,"\t");
 			UnityEngine.Debug.Log(t_jsonstring_pretty);
 
