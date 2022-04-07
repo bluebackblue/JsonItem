@@ -20,11 +20,11 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 	{
 		/** Convert
 		*/
-		public static void Convert(ref System.Object a_to_ref_object,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
+		public static void Convert(ref System.Object a_to_refobject,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
 		{
 			//IList
 			{
-				System.Collections.IList t_to_list = a_to_ref_object as System.Collections.IList;
+				System.Collections.IList t_to_list = a_to_refobject as System.Collections.IList;
 				if(t_to_list != null){
 
 					//値型。取得。
@@ -55,7 +55,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 			//IEnumerable
 			{
-				System.Collections.IEnumerable t_to_enumerable = a_to_ref_object as System.Collections.IEnumerable;
+				System.Collections.IEnumerable t_to_enumerable = a_to_refobject as System.Collections.IEnumerable;
 				if(t_to_enumerable != null){
 					System.Type t_generic_type = ReflectionTool.ReflectionTool.GetGenericTypeDefinition(a_to_type);
 
@@ -110,7 +110,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 			//IDictionary
 			{
-				System.Collections.IDictionary t_to_dictionary = a_to_ref_object as System.Collections.IDictionary;
+				System.Collections.IDictionary t_to_dictionary = a_to_refobject as System.Collections.IDictionary;
 				if(t_to_dictionary != null){
 
 					//キー型。

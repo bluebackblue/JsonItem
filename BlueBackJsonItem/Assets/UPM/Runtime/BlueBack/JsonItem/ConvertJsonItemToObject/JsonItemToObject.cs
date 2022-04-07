@@ -17,7 +17,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 	{
 		/** Convert
 		*/
-		public static void Convert(ref System.Object a_to_ref_object,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
+		public static void Convert(ref System.Object a_to_refobject,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
 		{
 			WorkPool t_workpool = a_workpool;
 
@@ -29,7 +29,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 				switch(a_from_jsonitem.GetValueType()){
 				case ValueType.StringData:
 					{
-						FromStringData.Convert(ref a_to_ref_object,a_to_type,a_from_jsonitem);
+						FromStringData.Convert(ref a_to_refobject,a_to_type,a_from_jsonitem);
 					}break;
 				case ValueType.SignedNumber:
 				case ValueType.UnsignedNumber:
@@ -37,15 +37,15 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 				case ValueType.DecimalNumber:
 				case ValueType.BoolData:
 					{
-						FromNumber.Convert(ref a_to_ref_object,a_to_type,a_from_jsonitem);
+						FromNumber.Convert(ref a_to_refobject,a_to_type,a_from_jsonitem);
 					}break;
 				case ValueType.IndexArray:
 					{
-						FromIndexArray.Convert(ref a_to_ref_object,a_to_type,a_from_jsonitem,t_workpool);
+						FromIndexArray.Convert(ref a_to_refobject,a_to_type,a_from_jsonitem,t_workpool);
 					}break;
 				case ValueType.AssociativeArray:
 					{
-						FromAssociativeArray.Convert(ref a_to_ref_object,a_to_type,a_from_jsonitem,t_workpool);
+						FromAssociativeArray.Convert(ref a_to_refobject,a_to_type,a_from_jsonitem,t_workpool);
 					}break;
 				case ValueType.Null:
 					{

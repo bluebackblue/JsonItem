@@ -20,11 +20,11 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 	{
 		/** Convert
 		*/
-		public static void Convert(ref System.Object a_to_ref_object,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
+		public static void Convert(ref System.Object a_to_refobject,System.Type a_to_type,JsonItem a_from_jsonitem,WorkPool a_workpool)
 		{
 			//IDictionary
 			{
-				System.Collections.IDictionary t_to_dictionary = a_to_ref_object as System.Collections.IDictionary;
+				System.Collections.IDictionary t_to_dictionary = a_to_refobject as System.Collections.IDictionary;
 				if(t_to_dictionary != null){
 
 					System.Type t_list_key_type = ReflectionTool.ReflectionTool.GetDictionaryKeyType(a_to_type);
@@ -57,7 +57,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 			}
 							
 			//class,struct
-			if(a_to_ref_object != null){
+			if(a_to_refobject != null){
 				System.Collections.Generic.List<System.Reflection.FieldInfo> t_fieldinfo_list = new System.Collections.Generic.List<System.Reflection.FieldInfo>();
 				ConvertTool.GetMemberListAll(a_to_type,t_fieldinfo_list);
 
@@ -65,7 +65,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 				foreach(System.Reflection.FieldInfo t_fieldinfo in t_fieldinfo_list){
 					if(a_from_jsonitem.IsExistItem(t_fieldinfo.Name) == true){
 						JsonItem t_jsonitem_classmember = a_from_jsonitem.GetItem(t_fieldinfo.Name);
-						a_workpool.AddFirst(WorkPool.ModeFieldInfo.Start,t_jsonitem_classmember,t_fieldinfo,a_to_ref_object);
+						a_workpool.AddFirst(WorkPool.ModeFieldInfo.Start,t_jsonitem_classmember,t_fieldinfo,a_to_refobject);
 					}
 				}
 

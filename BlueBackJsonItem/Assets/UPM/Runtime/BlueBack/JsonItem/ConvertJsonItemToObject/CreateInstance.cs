@@ -17,7 +17,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 	{
 		/** Create
 		*/
-		public static void Create(ref System.Object a_to_ref_object,System.Type a_to_type,JsonItem a_from_jsonitem)
+		public static void Create(ref System.Object a_to_refobject,System.Type a_to_type,JsonItem a_from_jsonitem)
 		{
 			#pragma warning disable 0162
 			switch(a_to_type.FullName){
@@ -55,13 +55,13 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 							{
 								System.Type t_element_type = a_to_type.GetElementType();
-								a_to_ref_object = System.Array.CreateInstance(t_element_type,t_list_count);
+								a_to_refobject = System.Array.CreateInstance(t_element_type,t_list_count);
 								return;
 							}
 						}else{
 							//インスタンス。
 							{
-								a_to_ref_object = System.Activator.CreateInstance(a_to_type);
+								a_to_refobject = System.Activator.CreateInstance(a_to_type);
 								return;
 							}
 						}

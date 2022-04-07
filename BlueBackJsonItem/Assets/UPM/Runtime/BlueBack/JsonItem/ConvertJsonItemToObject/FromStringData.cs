@@ -20,21 +20,21 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 	{
 		/** Convert
 		*/
-		public static void Convert(ref System.Object a_to_ref_object,System.Type a_to_type,JsonItem a_from_jsonitem)
+		public static void Convert(ref System.Object a_to_refobject,System.Type a_to_type,JsonItem a_from_jsonitem)
 		{
 			{
 				#pragma warning disable 0162
 				switch(a_to_type.FullName){
 				case "System." + nameof(System.String):
 					{
-						a_to_ref_object = a_from_jsonitem.GetStringData();
+						a_to_refobject = a_from_jsonitem.GetStringData();
 						return;
 					}break;
 				case "System." + nameof(System.Char):
 					{
 						char t_value;
 						if(System.Char.TryParse(a_from_jsonitem.GetStringData(),out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -51,7 +51,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.SByte t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
 						if(System.SByte.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -68,7 +68,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Byte t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
 						if(System.Byte.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -85,7 +85,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Int16 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
 						if(System.Int16.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -102,7 +102,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.UInt16 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
 						if(System.UInt16.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -119,7 +119,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Int32 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
 						if(System.Int32.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -136,7 +136,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.UInt32 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
 						if(System.UInt32.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -153,7 +153,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Int64 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign;
 						if(System.Int64.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -170,7 +170,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.UInt64 t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.None;
 						if(System.UInt64.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -187,7 +187,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Single t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign | System.Globalization.NumberStyles.AllowExponent | System.Globalization.NumberStyles.AllowDecimalPoint;
 						if(System.Single.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -204,7 +204,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Double t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign | System.Globalization.NumberStyles.AllowExponent | System.Globalization.NumberStyles.AllowDecimalPoint;
 						if(System.Double.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -220,7 +220,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 					{
 						System.Boolean t_value;
 						if(System.Boolean.TryParse(a_from_jsonitem.GetStringData(),out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -237,7 +237,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						System.Decimal t_value;
 						System.Globalization.NumberStyles t_style = System.Globalization.NumberStyles.AllowLeadingSign | System.Globalization.NumberStyles.AllowDecimalPoint;
 						if(System.Decimal.TryParse(a_from_jsonitem.GetStringData(),t_style,Config.CULTURE,out t_value) == true){
-							a_to_ref_object = t_value;
+							a_to_refobject = t_value;
 							return;
 						}else{
 							//失敗。
@@ -254,7 +254,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						if(a_to_type.IsEnum == true){
 							#pragma warning disable 0168
 							try{
-								a_to_ref_object = System.Enum.Parse(a_to_type,a_from_jsonitem.GetStringData());
+								a_to_refobject = System.Enum.Parse(a_to_type,a_from_jsonitem.GetStringData());
 							}catch(System.SystemException t_exception){
 								//無効な値。
 
