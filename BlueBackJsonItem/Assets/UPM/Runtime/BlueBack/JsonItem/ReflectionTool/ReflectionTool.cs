@@ -312,8 +312,8 @@ namespace BlueBack.JsonItem.ReflectionTool
 			{
 				System.Type t_generic_type = GetGenericTypeDefinition(a_type);
 				if(
-					(t_generic_type == typeof(System.Collections.Generic.Dictionary<,>))		||
-					(t_generic_type == typeof(System.Collections.Generic.SortedList<,>))		||
+					(t_generic_type == typeof(System.Collections.Generic.Dictionary<,>)) ||
+					(t_generic_type == typeof(System.Collections.Generic.SortedList<,>)) ||
 					(t_generic_type == typeof(System.Collections.Generic.SortedDictionary<,>))
 				){
 					System.Type[] t_type_list = a_type.GetGenericArguments();
@@ -356,8 +356,8 @@ namespace BlueBack.JsonItem.ReflectionTool
 					System.Type t_generic_type = GetGenericTypeDefinition(a_type);
 					if(t_generic_type != null){
 						if(
-							(t_generic_type == typeof(System.Collections.Generic.Dictionary<,>))		||
-							(t_generic_type == typeof(System.Collections.Generic.SortedList<,>))		||
+							(t_generic_type == typeof(System.Collections.Generic.Dictionary<,>)) ||
+							(t_generic_type == typeof(System.Collections.Generic.SortedList<,>)) ||
 							(t_generic_type == typeof(System.Collections.Generic.SortedDictionary<,>))
 						){
 							System.Type[] t_type_list = a_type.GetGenericArguments();
@@ -380,11 +380,11 @@ namespace BlueBack.JsonItem.ReflectionTool
 								#endif
 							}
 						}else if(
-							(t_generic_type == typeof(System.Collections.Generic.List<>))			|| 
-							(t_generic_type == typeof(System.Collections.Generic.Stack<>))			|| 
-							(t_generic_type == typeof(System.Collections.Generic.LinkedList<>))		||
-							(t_generic_type == typeof(System.Collections.Generic.HashSet<>))		||
-							(t_generic_type == typeof(System.Collections.Generic.Queue<>))			||
+							(t_generic_type == typeof(System.Collections.Generic.List<>)) || 
+							(t_generic_type == typeof(System.Collections.Generic.Stack<>)) || 
+							(t_generic_type == typeof(System.Collections.Generic.LinkedList<>)) ||
+							(t_generic_type == typeof(System.Collections.Generic.HashSet<>)) ||
+							(t_generic_type == typeof(System.Collections.Generic.Queue<>)) ||
 							(t_generic_type == typeof(System.Collections.Generic.SortedSet<>))
 						){
 							System.Type[] t_type_list = a_type.GetGenericArguments();

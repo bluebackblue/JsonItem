@@ -29,9 +29,9 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 					System.Type t_list_key_type = ReflectionTool.ReflectionTool.GetDictionaryKeyType(a_to_type);
 					if(t_list_key_type == typeof(string)){
-						//Generic.Dictionary<string.>
-						//Generic.SortedDictionary<string,>
-						//Generic.SortedList<string,>
+						//Generic.Dictionary<string.*>
+						//Generic.SortedDictionary<string,*>
+						//Generic.SortedList<string,*>
 
 						//リスト型の値型。取得。
 						System.Type t_list_value_type = ReflectionTool.ReflectionTool.GetListValueType(a_to_type);

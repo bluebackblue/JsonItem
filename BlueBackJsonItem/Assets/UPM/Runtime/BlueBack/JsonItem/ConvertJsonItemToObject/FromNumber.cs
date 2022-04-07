@@ -13,11 +13,11 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 {
 	/** オブジェクト化。
 
-		ValueType.SignedNumber:
-		ValueType.UnsignedNumber:
-		ValueType.FloatingNumber:
-		ValueType.DecimalNumber:
-		ValueType.BoolData:
+		ValueType.SignedNumber
+		ValueType.UnsignedNumber
+		ValueType.FloatingNumber
+		ValueType.DecimalNumber
+		ValueType.BoolData
 
 	*/
 	public static class FromNumber

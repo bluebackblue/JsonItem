@@ -26,9 +26,9 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 					if(t_from_dictionary != null){
 						System.Type t_list_key_type = ReflectionTool.ReflectionTool.GetDictionaryKeyType(a_from_type);
 						if(t_list_key_type == typeof(string)){
-							//Generic.Dictionary<string.>
-							//Generic.SortedDictionary<string,>
-							//Generic.SortedList<string,>
+							//Generic.Dictionary<string.*>
+							//Generic.SortedDictionary<string,*>
+							//Generic.SortedList<string,*>
 
 							JsonItem t_to_jsonitem = new JsonItem(new Value_AssociativeArray());
 
