@@ -2,6 +2,7 @@
 
 /** BlueBack.JsonItem.Samples.Convert.Editor
 */
+#if(!DEF_BLUEBACK_JSONITEM_SAMPLES_DISABLE)
 namespace BlueBack.JsonItem.Samples.Convert.Editor
 {
 	/** MenuItem
@@ -100,4 +101,5 @@ namespace BlueBack.JsonItem.Samples.Convert.Editor
 	}
 	#endif
 }
+#endif
 

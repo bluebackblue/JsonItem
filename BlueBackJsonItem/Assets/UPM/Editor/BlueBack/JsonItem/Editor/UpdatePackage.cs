@@ -22,7 +22,7 @@ namespace BlueBack.JsonItem.Editor
 
 		/** MenuItem_UpdatePackage_Develop
 		*/
-		#if(!DEF_USER_BLUEBACK_JSONITEM)
+		#if(!USERDEF_BLUEBACK_JSONITEM)
 		[UnityEditor.MenuItem("BlueBack/JsonItem/UpdatePackage/Develop")]
 		#endif
 		public static void MenuItem_UpdatePackage_Develop()
@@ -40,7 +40,7 @@ namespace BlueBack.JsonItem.Editor
 
 		/** MenuItem_UpdatePackage_Last
 		*/
-		#if(!DEF_USER_BLUEBACK_JSONITEM)
+		#if(!USERDEF_BLUEBACK_JSONITEM)
 		[UnityEditor.MenuItem("BlueBack/JsonItem/UpdatePackage/Last " + Version.packageversion)]
 		#endif
 		public static void MenuItem_UpdatePackage_Last()

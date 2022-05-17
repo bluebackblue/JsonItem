@@ -6,11 +6,7 @@ namespace BlueBack.JsonItem.Samples.Inspector
 {
 	/** Viewer_MonoBehaviour
 	*/
-	#if(UNITY_EDITOR)
 	public class Viewer_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
-	#else
-	public class Viewer_MonoBehaviour : UnityEngine.MonoBehaviour
-	#endif
 	{
 		/** jsonstring
 		*/
@@ -18,27 +14,39 @@ namespace BlueBack.JsonItem.Samples.Inspector
 		public string jsonstring_2 = "null";
 		public string jsonstring_3 = "[[\"value\",{\"aaa\":\"xxx\",\"bbb\":{\"abc\":\"xyz\"}},3],-1,1,0.001f,true,null,-3m,\"x\"]";
 
-		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
+		/** hash
 		*/
-		#if(UNITY_EDITOR)
-		public override BlueBack.JsonItem.JsonItem GetJsonItem()
-		{
-			return new BlueBack.JsonItem.JsonItem(this.jsonstring_1);
-		}
-		#endif
+		private int hash;
 
-		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
+		/** Awake
 		*/
-		#if(UNITY_EDITOR)
-		public override BlueBack.JsonItem.JsonItem[] GetMultiJsonItem()
+		private void Awake()
 		{
-			return new BlueBack.JsonItem.JsonItem[]{
-				new BlueBack.JsonItem.JsonItem(this.jsonstring_1),
-				new BlueBack.JsonItem.JsonItem(this.jsonstring_2),
-				new BlueBack.JsonItem.JsonItem(this.jsonstring_3),
-			};
+			#if(UNITY_EDITOR)
+			{
+				this.editor_view_list = new System.Collections.Generic.List<JsonItem>();
+			}
+			#endif
 		}
-		#endif
+
+		/** Update
+		*/
+		private void Update()
+		{
+			int t_hash_new = this.jsonstring_1.GetHashCode() ^ this.jsonstring_2.GetHashCode() ^ this.jsonstring_3.GetHashCode();
+			if(this.hash != t_hash_new){
+				this.hash = t_hash_new;
+
+				#if(UNITY_EDITOR)
+				{
+					this.editor_view_list.Clear();
+					this.editor_view_list.Add(new BlueBack.JsonItem.JsonItem(this.jsonstring_1));
+					this.editor_view_list.Add(new BlueBack.JsonItem.JsonItem(this.jsonstring_2));
+					this.editor_view_list.Add(new BlueBack.JsonItem.JsonItem(this.jsonstring_3));
+				}
+				#endif
+			}
+		}
 	}
 }
 

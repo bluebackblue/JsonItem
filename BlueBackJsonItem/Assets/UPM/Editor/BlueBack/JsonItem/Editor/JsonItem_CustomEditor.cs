@@ -58,23 +58,12 @@ namespace BlueBack.JsonItem.Editor
 
 			UnityEditor.EditorGUILayout.Space(18);
 
-			//シングル。
 			{
-				BlueBack.JsonItem.JsonItem t_jsonitem = t_this.GetJsonItem();
-				if(t_jsonitem != null){
-					UnityEditor.EditorGUILayout.LabelField(t_jsonitem.ConvertToJsonString());
-					this.Draw(0,null,"s",t_jsonitem);
-					UnityEditor.EditorGUILayout.Space(18);
-				}
-			}
-
-			//マルチ。
-			{
-				BlueBack.JsonItem.JsonItem[] t_jsonitem_list = t_this.GetMultiJsonItem();
-				if(t_jsonitem_list != null){
-					for(int ii=0;ii<t_jsonitem_list.Length;ii++){
-						UnityEditor.EditorGUILayout.LabelField(t_jsonitem_list[ii].ConvertToJsonString());
-						this.Draw(0,null,ii.ToString(),t_jsonitem_list[ii]);
+				System.Collections.Generic.List<BlueBack.JsonItem.JsonItem> t_editor_view_list = t_this.editor_view_list;
+				if(t_editor_view_list != null){
+					for(int ii=0;ii<t_editor_view_list.Count;ii++){
+						UnityEditor.EditorGUILayout.LabelField(t_editor_view_list[ii].ConvertToJsonString());
+						this.Draw(0,null,ii.ToString(),t_editor_view_list[ii]);
 						UnityEditor.EditorGUILayout.Space(18);
 					}
 				}

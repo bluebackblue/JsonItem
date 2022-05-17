@@ -1,0 +1,23 @@
+{
+    "name": "Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fecda0037eeeda94a8c6fb2bff85294b",
+        "GUID:96df67cbf8a508749b063eade9274e19"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "blueback.versionmanager",
+            "expression": "",
+            "define": "ASMDEF_BLUEBACK_VERSIONMANAGER"
+        }
+    ],
+    "noEngineReferences": false
+}

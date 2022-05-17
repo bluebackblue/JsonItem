@@ -13,18 +13,12 @@ namespace BlueBack.JsonItem
 {
 	/** InspectorViewer_MonoBehaviour
 	*/
-	public abstract class InspectorViewer_MonoBehaviour : UnityEngine.MonoBehaviour
+	public class InspectorViewer_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
-		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
+		/** editor_view_list
 		*/
 		#if(UNITY_EDITOR)
-		public abstract BlueBack.JsonItem.JsonItem GetJsonItem();
-		#endif
-
-		/** [BlueBack.JsonItem.JsonItemViewer_MonoBehaviour]表示するJsonItemの取得。
-		*/
-		#if(UNITY_EDITOR)
-		public abstract BlueBack.JsonItem.JsonItem[] GetMultiJsonItem();
+		public System.Collections.Generic.List<BlueBack.JsonItem.JsonItem> editor_view_list;
 		#endif
 	}
 }
