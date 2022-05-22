@@ -80,7 +80,7 @@ namespace BlueBack.JsonItem.Samples.Convert.Editor
 		[UnityEditor.MenuItem("Samples/BlueBack.JsonItem/Convert/Normalize")]
 		private static void MenuItem_Normalize()
 		{
-			string t_jsonstring_raw = BlueBack.AssetLib.Editor.LoadTextWithUrl.LoadNoBomUtf8("https://api.github.com/repos/bluebackblue/AssetLib/tags",null);
+			string t_jsonstring_raw = BlueBack.AssetLib.LoadTextWithUrl.LoadNoBomUtf8("https://api.github.com/repos/bluebackblue/AssetLib/tags",null);
 			UnityEngine.Debug.Log(t_jsonstring_raw);
 
 			//空白、タブ、改行を省く。
