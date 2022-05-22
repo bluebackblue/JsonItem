@@ -157,7 +157,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 			}
 			this.list.AddFirst(t_item);
 		}
-		
+
 		/** AddFirst
 
 			List。追加。

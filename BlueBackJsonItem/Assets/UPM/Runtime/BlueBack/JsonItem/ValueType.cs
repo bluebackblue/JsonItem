@@ -44,7 +44,7 @@ namespace BlueBack.JsonItem
 			System.Int32
 			System.UInt32
 			System.Int64
-		
+
 		*/
 		SignedNumber = 16,
 

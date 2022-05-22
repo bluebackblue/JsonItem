@@ -28,7 +28,7 @@ namespace BlueBack.JsonItem.Editor
 			if(this.expanded == null){
 				this.expanded = new System.Collections.Generic.Dictionary<string,bool>();
 			}
-		
+
 			if(this.expanded.ContainsKey(a_address) == true){
 				return this.expanded[a_address];
 			}else{
@@ -75,7 +75,7 @@ namespace BlueBack.JsonItem.Editor
 		public void Draw(int a_nest,string a_name,string a_address,BlueBack.JsonItem.JsonItem a_jsonitem)
 		{
 			if(a_jsonitem == null){
-				 UnityEditor.EditorGUILayout.LabelField("null");
+				UnityEditor.EditorGUILayout.LabelField("null");
 			}else{
 				switch(a_jsonitem.value.valuetype){
 				case BlueBack.JsonItem.ValueType.Null:

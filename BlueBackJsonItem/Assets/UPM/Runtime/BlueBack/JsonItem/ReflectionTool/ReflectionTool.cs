@@ -26,16 +26,16 @@ namespace BlueBack.JsonItem.ReflectionTool
 
 			{
 				t_memberinfo_list = a_type.GetMembers(
-				
+
 					//指定した型の階層のレベルで宣言されたメンバーのみを対象にすることを指定します。 継承されたメンバーは対象になりません。
 					System.Reflection.BindingFlags.DeclaredOnly |
-							
+
 					//インスタンス メンバーを検索に含めることを指定します。
 					System.Reflection.BindingFlags.Instance |
-							
+
 					//パブリック メンバーを検索に含めることを指定します。
 					System.Reflection.BindingFlags.Public |
-							
+
 					//パブリック メンバー以外のメンバーを検索に含めることを指定します。
 					System.Reflection.BindingFlags.NonPublic
 
@@ -57,16 +57,16 @@ namespace BlueBack.JsonItem.ReflectionTool
 			{
 				//取得。
 				t_methodinfo_list = a_type.GetMethods(
-				
+
 					//指定した型の階層のレベルで宣言されたメンバーのみを対象にすることを指定します。 継承されたメンバーは対象になりません。
 					System.Reflection.BindingFlags.DeclaredOnly |
-							
+
 					//インスタンス メンバーを検索に含めることを指定します。
 					System.Reflection.BindingFlags.Instance |
-							
+
 					//パブリック メンバーを検索に含めることを指定します。
 					System.Reflection.BindingFlags.Public //|
-							
+
 					//パブリック メンバー以外のメンバーを検索に含めることを指定します。
 					//System.Reflection.BindingFlags.NonPublic
 
@@ -337,7 +337,7 @@ namespace BlueBack.JsonItem.ReflectionTool
 					}
 				}
 			}
-			
+
 			return t_type;
 		}
 
@@ -419,7 +419,7 @@ namespace BlueBack.JsonItem.ReflectionTool
 					}
 				}
 			}
-			
+
 			return t_type;
 		}
 	}

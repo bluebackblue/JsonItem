@@ -116,7 +116,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 						}
 						#pragma warning restore
 					}
-			
+
 					//リストに追加。
 					if(t_value_size > 0){
 						JsonItem t_additem = new JsonItem();
@@ -137,7 +137,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 					}
 				}
 			}
-		
+
 			//不明。
 
 			#if(DEF_BLUEBACK_JSONITEM_ASSERT)

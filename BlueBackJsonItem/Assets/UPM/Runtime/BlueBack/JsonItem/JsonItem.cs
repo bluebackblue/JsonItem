@@ -265,7 +265,7 @@ namespace BlueBack.JsonItem
 		}
 
 		/** 値設定。
-		
+
 			0 -- 255
 
 		*/
@@ -752,7 +752,7 @@ namespace BlueBack.JsonItem
 			if(this.jsonstring != null){
 				this.JsonStringToValue();
 			}
-		
+
 			switch(this.value.valuetype){
 			case ValueType.AssociativeArray:
 				{
@@ -843,7 +843,7 @@ namespace BlueBack.JsonItem
 			if(this.jsonstring != null){
 				this.JsonStringToValue();
 			}
-		
+
 			System.Collections.Generic.Dictionary<string,JsonItem> t_associativearray = this.value.GetAssociativeArray();
 			if(t_associativearray != null){
 				JsonItem t_value;
@@ -858,7 +858,7 @@ namespace BlueBack.JsonItem
 					}
 				}
 			}
-		
+
 			return false;
 		}
 
@@ -883,7 +883,7 @@ namespace BlueBack.JsonItem
 					}
 				}
 			}
-		
+
 			return false;
 		}
 
@@ -912,7 +912,7 @@ namespace BlueBack.JsonItem
 			if(this.jsonstring != null){
 				this.JsonStringToValue();
 			}
-		
+
 			System.Collections.Generic.List<JsonItem> t_indexarray = this.value.GetIndexArray();
 			if(t_indexarray != null){
 				if((a_clone == true)&&(a_item != null)){
@@ -988,7 +988,7 @@ namespace BlueBack.JsonItem
 			if(this.jsonstring != null){
 				this.JsonStringToValue();
 			}
-		
+
 			System.Collections.Generic.Dictionary<string,JsonItem> t_associativearray = this.value.GetAssociativeArray();
 			if(t_associativearray != null){
 				t_associativearray.Remove(a_itemname);
@@ -1002,7 +1002,7 @@ namespace BlueBack.JsonItem
 			if(this.jsonstring != null){
 				this.JsonStringToValue();
 			}
-		
+
 			System.Collections.Generic.List<JsonItem> t_indexarray = this.value.GetIndexArray();
 			if(t_indexarray != null){
 				t_indexarray.RemoveAt(a_index);
@@ -1117,7 +1117,7 @@ namespace BlueBack.JsonItem
 					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
 					DebugTool.Assert(false);
 					#endif
-				
+
 					return;
 				}break;
 			}
@@ -1224,7 +1224,7 @@ namespace BlueBack.JsonItem
 						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
 						DebugTool.Assert(false);
 						#endif
-				
+
 						this.value.raw = null;
 						this.jsonstring = null;
 						return;

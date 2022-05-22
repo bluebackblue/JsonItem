@@ -207,7 +207,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 					foreach(System.Reflection.FieldInfo t_fieldinfo in t_fieldinfo_list){
 						a_workpool.Add(WorkPool.ModeFieldInfo.Start,t_to_jsonitem,t_fieldinfo,a_from_object,a_nest + 1);
 					}
-							
+
 					//成功。
 					return t_to_jsonitem;
 				}

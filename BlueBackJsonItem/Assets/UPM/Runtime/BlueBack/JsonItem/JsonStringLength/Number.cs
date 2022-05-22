@@ -74,7 +74,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 					}
 				}
 				#pragma warning restore
-			
+
 				//終端。
 				return t_index - a_index;
 			}else{

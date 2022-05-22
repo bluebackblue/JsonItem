@@ -72,7 +72,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 						}
 						#pragma warning restore
 					}
-				
+
 					//終端前に範囲外。
 
 					#if(DEF_BLUEBACK_JSONITEM_ASSERT)

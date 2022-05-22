@@ -69,7 +69,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 							}break;
 						}
 					}
-				
+
 					//終端前に範囲外。
 
 					#if(DEF_BLUEBACK_JSONITEM_ASSERT)

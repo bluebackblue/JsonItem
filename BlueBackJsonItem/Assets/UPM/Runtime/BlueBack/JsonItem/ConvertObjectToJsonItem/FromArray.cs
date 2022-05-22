@@ -23,7 +23,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 				//[]
 
 				System.Array t_array_raw = (System.Array)a_from_object;
-	
+
 				JsonItem t_to_jsonitem = new JsonItem(new Value_IndexArray());
 
 				//サイズ確保。

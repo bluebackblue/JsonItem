@@ -55,7 +55,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 					}
 				}
 			}
-							
+
 			//class,struct
 			if(a_to_refobject != null){
 				System.Collections.Generic.List<System.Reflection.FieldInfo> t_fieldinfo_list = new System.Collections.Generic.List<System.Reflection.FieldInfo>();

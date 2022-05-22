@@ -22,11 +22,11 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 			{
 				if(a_in_jsonstring.Length < 1){
 					//不明。
-					
+
 					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
 					DebugTool.Assert(false);
 					#endif
-					
+
 					a_out_value = default;
 					return;
 				}

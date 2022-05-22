@@ -72,7 +72,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 					}
 				}
 			}
-		
+
 			//不明。
 
 			#if(DEF_BLUEBACK_JSONITEM_ASSERT)

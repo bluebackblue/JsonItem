@@ -134,7 +134,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 								t_value_jsonitem = t_listitem_jsonitem.GetItem("VALUE");
 							}
 						}
-							
+
 						a_workpool.AddFirst(WorkPool.ModeAddAnyDictionary.Start,t_key_jsonitem,t_value_jsonitem,t_to_dictionary,t_list_key_type,t_list_value_type);
 					}
 

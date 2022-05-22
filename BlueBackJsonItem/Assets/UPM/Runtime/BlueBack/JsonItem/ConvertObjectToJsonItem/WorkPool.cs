@@ -334,7 +334,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						if(a_item.nest < Config.CONVERTNEST_MAX){
 							t_jsonitem_member = ConvertObjectToJsonItem.Convert(t_raw,t_raw.GetType(),a_item.from_option,this,a_item.nest + 1);
 						}else{
-							
+
 							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
 							DebugTool.Assert(false);
 							#endif

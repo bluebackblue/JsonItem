@@ -138,7 +138,7 @@ namespace BlueBack.JsonItem
 			this.valuetype = a_valuetype;
 			this.raw = null;
 		}
-	
+
 		/** 設定。
 		*/
 		public void Reset(System.Collections.Generic.Dictionary<string,JsonItem> a_raw)

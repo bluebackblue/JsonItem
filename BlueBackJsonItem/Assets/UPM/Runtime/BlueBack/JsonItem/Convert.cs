@@ -95,7 +95,7 @@ namespace BlueBack.JsonItem
 		{
 			return JsonStringToObject_Fee<Type>(a_jsonstring);
 		}
-	
+
 		/** Fee。オブジェクト => Json文字列。
 		*/
 		public static void ObjectToJsonString_Fee<Type>(Type a_instance,System.Text.StringBuilder a_stringbuilder,ConvertToJsonItemOption a_option_tojsonitem,ConvertToJsonStringOption a_option_tojsonstring)
