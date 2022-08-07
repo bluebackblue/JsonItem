@@ -212,9 +212,11 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						#endif
 					}
 
-					#if(DEF_BLUEBACK_LOG_LOOPLIMIT)
+					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(t_count > Config.LOOPLIMIT){
-						DebugTool.Log(string.Format("WorkPool : list : {0}",t_count));
+						#if(DEF_BLUEBACK_ASSERT)
+						DebugTool.Assert(false,string.Format("WorkPool : list : {0}",t_count));
+						#endif
 					}
 					#endif
 				}else{
@@ -234,9 +236,11 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_listitem = null;
 
-					#if(DEF_BLUEBACK_LOG)
-					if(a_item.nest > byte.MaxValue){
-						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
+					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
+					if(a_item.nest > Config.NESTLIMIT){
+						#if(DEF_BLUEBACK_ASSERT)
+						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
+						#endif
 					}
 					#endif
 
@@ -259,9 +263,11 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_listitem = null;
 
-					#if(DEF_BLUEBACK_LOG)
-					if(a_item.nest > byte.MaxValue){
-						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
+					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
+					if(a_item.nest > Config.NESTLIMIT){
+						#if(DEF_BLUEBACK_ASSERT)
+						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
+						#endif
 					}
 					#endif
 
@@ -284,9 +290,11 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_member = null;
 
-					#if(DEF_BLUEBACK_LOG)
-					if(a_item.nest > byte.MaxValue){
-						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
+					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
+					if(a_item.nest > Config.NESTLIMIT){
+						#if(DEF_BLUEBACK_ASSERT)
+						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
+						#endif
 					}
 					#endif
 
@@ -319,9 +327,11 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 						JsonItem t_jsonitem_member = null;
 
-						#if(DEF_BLUEBACK_LOG)
-						if(a_item.nest > byte.MaxValue){
-							DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
+						#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
+						if(a_item.nest > Config.NESTLIMIT){
+							#if(DEF_BLUEBACK_ASSERT)
+							DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
+							#endif
 						}
 						#endif
 

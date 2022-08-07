@@ -17,10 +17,15 @@ namespace BlueBack.JsonItem
 	{
 		/** LOOPLIMIT
 		*/
-		#if(DEF_BLUEBACK_LOG_LOOPLIMIT)
+		#if(DEF_BLUEBACK_JSONITEM_LOOPLIMIT)
 		public static int LOOPLIMIT = ushort.MaxValue;
 		#endif
 
+		/** NESTLIMIT
+		*/
+		#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
+		public static int NESTLIMIT = ushort.MaxValue;
+		#endif
 
 		/** CULTURE
 		*/

@@ -329,9 +329,11 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 					this.list.RemoveFirst();
 					this.Main_Item(t_current_work);
 
-					#if(DEF_BLUEBACK_LOG_LOOPLIMIT)
+					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(t_count > Config.LOOPLIMIT){
-						DebugTool.Log(string.Format("WorkPool : list : {0}",t_count));
+						#if(DEF_BLUEBACK_ASSERT)
+						DebugTool.Assert(false,string.Format("WorkPool : list : {0}",t_count));
+						#endif
 					}
 					#endif
 				}else{
