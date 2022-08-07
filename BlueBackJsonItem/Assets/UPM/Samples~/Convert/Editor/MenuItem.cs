@@ -8,7 +8,7 @@ namespace BlueBack.JsonItem.Samples.Convert.Editor
 	/** MenuItem
 	*/
 	#if(UNITY_EDITOR)
-	public class MenuItem
+	public static class MenuItem
 	{
 		/** E
 		*/

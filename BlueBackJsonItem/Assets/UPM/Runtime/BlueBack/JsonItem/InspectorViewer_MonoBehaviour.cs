@@ -13,7 +13,7 @@ namespace BlueBack.JsonItem
 {
 	/** InspectorViewer_MonoBehaviour
 	*/
-	public class InspectorViewer_MonoBehaviour : UnityEngine.MonoBehaviour
+	public /*sealed*/ class InspectorViewer_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
 		/** editor_view_list
 		*/

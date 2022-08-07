@@ -6,7 +6,7 @@ namespace BlueBack.JsonItem.Samples.Inspector
 {
 	/** Viewer_MonoBehaviour
 	*/
-	public class Viewer_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
+	public sealed class Viewer_MonoBehaviour : BlueBack.JsonItem.InspectorViewer_MonoBehaviour
 	{
 		/** jsonstring
 		*/
