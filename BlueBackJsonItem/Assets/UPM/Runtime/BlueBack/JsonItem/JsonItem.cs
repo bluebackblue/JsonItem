@@ -11,11 +11,11 @@
 */
 namespace BlueBack.JsonItem
 {
-	/** TYPE
+	/** using
 	*/
-	using SIGNED_NUMBER_TYPE = System.Int64;
-	using UNSIGNED_NUMBER_TYPE = System.UInt64;
-	using FLOATING_NUMBER_TYPE = System.Double;
+	using SignedNumberType = System.Int64;
+	using UnsignedNumberType = System.UInt64;
+	using FloatingNumberType = System.Double;
 
 	/** JsonItem
 	*/
@@ -33,21 +33,21 @@ namespace BlueBack.JsonItem
 		*/
 		public static System.Type GetSignedNumberType()
 		{
-			return typeof(SIGNED_NUMBER_TYPE);
+			return typeof(SignedNumberType);
 		}
 
 		/** タイプ取得。符号なし。
 		*/
 		public static System.Type GetUnsignedNumberType()
 		{
-			return typeof(UNSIGNED_NUMBER_TYPE);
+			return typeof(UnsignedNumberType);
 		}
 
 		/** タイプ取得。符号なし。
 		*/
 		public static System.Type GetFloatingNumberType()
 		{
-			return typeof(FLOATING_NUMBER_TYPE);
+			return typeof(FloatingNumberType);
 		}
 
 		/** オブジェクトへコンバート。
@@ -429,7 +429,7 @@ namespace BlueBack.JsonItem
 			System.Int64
 
 		*/
-		public SIGNED_NUMBER_TYPE GetSignedNumber()
+		public SignedNumberType GetSignedNumber()
 		{
 			this.JsonStringToValue();
 			return this.value.GetSignedNumber();
@@ -440,7 +440,7 @@ namespace BlueBack.JsonItem
 			System.UInt64
 
 		*/
-		public UNSIGNED_NUMBER_TYPE GetUnsignedNumber()
+		public UnsignedNumberType GetUnsignedNumber()
 		{
 			this.JsonStringToValue();
 			return this.value.GetUnsignedNumber();
@@ -452,7 +452,7 @@ namespace BlueBack.JsonItem
 			System.Double
 
 		*/
-		public FLOATING_NUMBER_TYPE GetFloatingNumber()
+		public FloatingNumberType GetFloatingNumber()
 		{
 			this.JsonStringToValue();
 			return this.value.GetFloatingNumber();
@@ -726,7 +726,7 @@ namespace BlueBack.JsonItem
 				default:
 					{
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -735,7 +735,7 @@ namespace BlueBack.JsonItem
 				#pragma warning restore
 			}else{
 
-				#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false);
 				#endif
 
@@ -784,7 +784,7 @@ namespace BlueBack.JsonItem
 				}break;
 			}
 
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -807,7 +807,7 @@ namespace BlueBack.JsonItem
 				}
 			}
 
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -829,7 +829,7 @@ namespace BlueBack.JsonItem
 				}
 			}
 
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -850,7 +850,7 @@ namespace BlueBack.JsonItem
 				if(t_associativearray.TryGetValue(a_itemname,out t_value) == true){
 					if((t_value.value.valuetype | a_valuetype) > 0){
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert((t_value.value.valuetype & ValueType.Calc) == 0);
 						#endif
 
@@ -875,7 +875,7 @@ namespace BlueBack.JsonItem
 				if(a_index < t_indexarray.Count){
 					if((t_indexarray[a_index].value.valuetype | a_valuetype) > 0){
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert((t_indexarray[a_index].value.valuetype & ValueType.Calc) == 0);
 						#endif
 
@@ -973,7 +973,7 @@ namespace BlueBack.JsonItem
 					}
 				}else{
 
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -1042,7 +1042,7 @@ namespace BlueBack.JsonItem
 				return t_associativearray.Keys;
 			}
 
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -1114,7 +1114,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -1143,7 +1143,7 @@ namespace BlueBack.JsonItem
 					}break;
 				case ValueType.SignedNumber:
 					{
-						SIGNED_NUMBER_TYPE t_value;
+						SignedNumberType t_value;
 						ConvertJsonStringToObject.SignedNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
@@ -1152,7 +1152,7 @@ namespace BlueBack.JsonItem
 					}break;
 				case ValueType.UnsignedNumber:
 					{
-						UNSIGNED_NUMBER_TYPE t_value;
+						UnsignedNumberType t_value;
 						ConvertJsonStringToObject.UnsignedNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
@@ -1161,7 +1161,7 @@ namespace BlueBack.JsonItem
 					}break;
 				case ValueType.FloatingNumber:
 					{
-						FLOATING_NUMBER_TYPE t_value;
+						FloatingNumberType t_value;
 						ConvertJsonStringToObject.FloatingNumber.Convert(this.jsonstring,out t_value);
 
 						this.value.raw = t_value;
@@ -1221,7 +1221,7 @@ namespace BlueBack.JsonItem
 					}break;
 				default:
 					{
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 

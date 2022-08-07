@@ -53,7 +53,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 					}break;
 				default:
 					{
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}break;

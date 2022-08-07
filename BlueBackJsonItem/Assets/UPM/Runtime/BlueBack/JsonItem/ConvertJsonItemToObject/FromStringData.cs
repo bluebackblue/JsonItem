@@ -39,7 +39,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -56,7 +56,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -73,7 +73,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -90,7 +90,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -107,7 +107,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -124,7 +124,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -141,7 +141,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -158,7 +158,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -175,7 +175,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -192,7 +192,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -209,7 +209,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -225,7 +225,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -242,7 +242,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -258,7 +258,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 							}catch(System.SystemException t_exception){
 								//無効な値。
 
-								#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+								#if(DEF_BLUEBACK_ASSERT)
 								DebugTool.Assert(false,t_exception.Message + " : " + a_from_jsonitem.GetStringData() + " -> " + a_to_type.ToString());
 								#endif
 							}
@@ -267,7 +267,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 						}else{
 							//失敗。
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 

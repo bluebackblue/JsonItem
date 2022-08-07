@@ -15,19 +15,18 @@ namespace BlueBack.JsonItem
 	*/
 	public static class Config
 	{
-		/** プール数。最大値。
+		/** LOOPLIMIT
 		*/
-		public static int POOL_MAX = 1024;
+		#if(DEF_BLUEBACK_LOG_LOOPLIMIT)
+		public static int LOOPLIMIT = ushort.MaxValue;
+		#endif
 
-		/** コンバートネスト。最大値。
-		*/
-		public static int CONVERTNEST_MAX = 32;
 
 		/** CULTURE
 		*/
 		public static System.IFormatProvider CULTURE = System.Globalization.CultureInfo.CreateSpecificCulture("ja-JP");
 
-		/** Floating To String
+		/** FLOATING_TO_STRING_FORMAT
 		*/
 		public static string FLOATING_TO_STRING_FORMAT = "{0:e16}";
 

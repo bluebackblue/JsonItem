@@ -11,11 +11,11 @@
 */
 namespace BlueBack.JsonItem
 {
-	/** TYPE
+	/** using
 	*/
-	using SIGNED_NUMBER_TYPE = System.Int64;
-	using UNSIGNED_NUMBER_TYPE = System.UInt64;
-	using FLOATING_NUMBER_TYPE = System.Double;
+	using SignedNumberType = System.Int64;
+	using UnsignedNumberType = System.UInt64;
+	using FloatingNumberType = System.Double;
 
 	/** Value
 	*/
@@ -168,7 +168,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Char a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -176,7 +176,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.SByte a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -184,7 +184,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Byte a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -192,7 +192,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Int16 a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -200,7 +200,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.UInt16 a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -208,7 +208,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Int32 a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -216,7 +216,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.UInt32 a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -224,7 +224,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Int64 a_raw)
 		{
 			this.valuetype = ValueType.SignedNumber;
-			this.raw = (SIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (SignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -232,7 +232,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.UInt64 a_raw)
 		{
 			this.valuetype = ValueType.UnsignedNumber;
-			this.raw = (UNSIGNED_NUMBER_TYPE)a_raw;
+			this.raw = (UnsignedNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -240,7 +240,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Single a_raw)
 		{
 			this.valuetype = ValueType.FloatingNumber;
-			this.raw = (FLOATING_NUMBER_TYPE)a_raw;
+			this.raw = (FloatingNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -248,7 +248,7 @@ namespace BlueBack.JsonItem
 		public void Reset(System.Double a_raw)
 		{
 			this.valuetype = ValueType.FloatingNumber;
-			this.raw = (FLOATING_NUMBER_TYPE)a_raw;
+			this.raw = (FloatingNumberType)a_raw;
 		}
 
 		/** 設定。
@@ -279,7 +279,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.Dictionary<string,JsonItem> GetAssociativeArray()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.AssociativeArray);
 			#endif
 
@@ -290,7 +290,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.List<JsonItem> GetIndexArray()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.IndexArray);
 			#endif
 
@@ -301,7 +301,7 @@ namespace BlueBack.JsonItem
 		*/
 		public string GetStringData()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.StringData);
 			#endif
 
@@ -310,42 +310,42 @@ namespace BlueBack.JsonItem
 
 		/** GetSignedNumber
 		*/
-		public SIGNED_NUMBER_TYPE GetSignedNumber()
+		public SignedNumberType GetSignedNumber()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.SignedNumber);
 			#endif
 
-			return (SIGNED_NUMBER_TYPE)this.raw;
+			return (SignedNumberType)this.raw;
 		}
 
 		/** GetUnsignedNumber
 		*/
-		public UNSIGNED_NUMBER_TYPE GetUnsignedNumber()
+		public UnsignedNumberType GetUnsignedNumber()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.UnsignedNumber);
 			#endif
 
-			return (UNSIGNED_NUMBER_TYPE)this.raw;
+			return (UnsignedNumberType)this.raw;
 		}
 
 		/** GetFloatingNumber
 		*/
-		public FLOATING_NUMBER_TYPE GetFloatingNumber()
+		public FloatingNumberType GetFloatingNumber()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.FloatingNumber);
 			#endif
 
-			return (FLOATING_NUMBER_TYPE)this.raw;
+			return (FloatingNumberType)this.raw;
 		}
 
 		/** GetBoolData
 		*/
 		public System.Boolean GetBoolData()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.BoolData);
 			#endif
 
@@ -356,7 +356,7 @@ namespace BlueBack.JsonItem
 		*/
 		public decimal GetDecimalNumber()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.DecimalNumber);
 			#endif
 
@@ -367,7 +367,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.List<byte> GetBinaryData()
 		{
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.BinaryData);
 			#endif
 
@@ -382,15 +382,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Char)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Char)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Char)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Char)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Char)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Char)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -402,7 +402,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -420,15 +420,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.SByte)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.SByte)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.SByte)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.SByte)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.SByte)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.SByte)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -440,7 +440,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -458,15 +458,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Byte)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Byte)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Byte)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Byte)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Byte)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Byte)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -478,7 +478,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -496,15 +496,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Int16)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int16)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Int16)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int16)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Int16)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Int16)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -516,7 +516,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -534,15 +534,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.UInt16)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt16)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.UInt16)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt16)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.UInt16)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.UInt16)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -554,7 +554,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -572,15 +572,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Int32)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int32)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Int32)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int32)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Int32)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Int32)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -592,7 +592,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -610,15 +610,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.UInt32)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt32)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.UInt32)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt32)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.UInt32)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.UInt32)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -630,7 +630,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -648,15 +648,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Int64)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int64)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Int64)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Int64)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Int64)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Int64)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -668,7 +668,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -686,15 +686,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.UInt64)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt64)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.UInt64)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.UInt64)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.UInt64)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.UInt64)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -706,7 +706,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -724,15 +724,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Single)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Single)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Single)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Single)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Single)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Single)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -744,7 +744,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -762,15 +762,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Double)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Double)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Double)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Double)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Double)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Double)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -782,7 +782,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -800,15 +800,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return ((SIGNED_NUMBER_TYPE)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
+					return ((SignedNumberType)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return ((FLOATING_NUMBER_TYPE)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
+					return ((FloatingNumberType)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return ((UNSIGNED_NUMBER_TYPE)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
+					return ((UnsignedNumberType)this.raw > 0) ? (System.Boolean)true : (System.Boolean)false;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -820,7 +820,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -838,15 +838,15 @@ namespace BlueBack.JsonItem
 			switch(this.valuetype){
 			case ValueType.SignedNumber:
 				{
-					return (System.Decimal)(SIGNED_NUMBER_TYPE)this.raw;
+					return (System.Decimal)(SignedNumberType)this.raw;
 				}break;
 			case ValueType.UnsignedNumber:
 				{
-					return (System.Decimal)(UNSIGNED_NUMBER_TYPE)this.raw;
+					return (System.Decimal)(UnsignedNumberType)this.raw;
 				}break;
 			case ValueType.FloatingNumber:
 				{
-					return (System.Decimal)(FLOATING_NUMBER_TYPE)this.raw;
+					return (System.Decimal)(FloatingNumberType)this.raw;
 				}break;
 			case ValueType.DecimalNumber:
 				{
@@ -858,7 +858,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 

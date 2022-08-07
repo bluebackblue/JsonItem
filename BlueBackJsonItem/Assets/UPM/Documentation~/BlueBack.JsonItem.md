@@ -21,7 +21,7 @@ Unity 2022.1.0b16
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM#0.0.30
+* https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM#0.0.31
 ### 開発
 * https://github.com/bluebackblue/UpmJsonItem.git?path=BlueBackJsonItem/Assets/UPM
 
@@ -52,20 +52,16 @@ public struct Item
 		yy = 11,
 		zzz = 123.4f,
 	};
-	
 	//JsonItemにコンバート。
 	BlueBack.JsonItem.JsonItem t_jsonitem = BlueBack.JsonItem.Convert.ObjectToJsonItem(t_from_item);
-
 	//JSON文字列にコンバート。
 	string t_jsonstring = t_jsonitem.ConvertToJsonString();
 	UnityEngine.Debug.Log("ConvertToJsonString : " + t_jsonstring);
-
 	//オブジェクトにコンバート。
 	Item t_to_item = t_jsonitem.ConvertToObject<Item>();
 	UnityEngine.Debug.Log("ConvertToObject : x = " + t_to_item.x.ToString());
 	UnityEngine.Debug.Log("ConvertToObject : yy = " + t_to_item.yy.ToString());
 	UnityEngine.Debug.Log("ConvertToObject : zzz = " + t_to_item.zzz.ToString());
-
 	//JsonItemから直接取り出す。
 	t_jsonitem = new BlueBack.JsonItem.JsonItem(t_jsonstring);
 	UnityEngine.Debug.Log("JsonItem : x = " + t_jsonitem.GetItem("x").CastToInt32().ToString());

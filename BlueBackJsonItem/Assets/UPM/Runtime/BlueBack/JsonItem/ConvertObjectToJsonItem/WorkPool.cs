@@ -207,19 +207,16 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						//エラー。
 						this.list.Clear();
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
 
-					//たぶん無限ループ。
-					if(t_count > Config.POOL_MAX){
-						this.list.Clear();
-
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-						DebugTool.Assert(false);
-						#endif
+					#if(DEF_BLUEBACK_LOG_LOOPLIMIT)
+					if(t_count > Config.LOOPLIMIT){
+						DebugTool.Log(string.Format("WorkPool : list : {0}",t_count));
 					}
+					#endif
 				}else{
 					break;
 				}
@@ -237,22 +234,19 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_listitem = null;
 
-					if(a_item.nest < Config.CONVERTNEST_MAX){
-						t_jsonitem_listitem = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
-					}else{
-
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-						DebugTool.Assert(false);
-						#endif
-
-						return false;
+					#if(DEF_BLUEBACK_LOG)
+					if(a_item.nest > byte.MaxValue){
+						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
 					}
+					#endif
+
+					t_jsonitem_listitem = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
 
 					if(a_item.to_jsonitem != null){
 						a_item.to_jsonitem.AddItem(t_jsonitem_listitem,false);
 					}else{
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -265,22 +259,19 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_listitem = null;
 
-					if(a_item.nest < Config.CONVERTNEST_MAX){
-						t_jsonitem_listitem = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
-					}else{
-
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-						DebugTool.Assert(false);
-						#endif
-
-						return false;
+					#if(DEF_BLUEBACK_LOG)
+					if(a_item.nest > byte.MaxValue){
+						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
 					}
+					#endif
+
+					t_jsonitem_listitem = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
 
 					if(a_item.to_jsonitem != null){
 						a_item.to_jsonitem.SetItem(a_item.to_index,t_jsonitem_listitem,false);
 					}else{
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -293,22 +284,19 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					JsonItem t_jsonitem_member = null;
 
-					if(a_item.nest < Config.CONVERTNEST_MAX){
-						t_jsonitem_member = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
-					}else{
-
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-						DebugTool.Assert(false);
-						#endif
-
-						return false;
+					#if(DEF_BLUEBACK_LOG)
+					if(a_item.nest > byte.MaxValue){
+						DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
 					}
+					#endif
+
+					t_jsonitem_member = ConvertObjectToJsonItem.Convert(a_item.from_object,a_item.from_type,a_item.from_option,this,a_item.nest + 1);
 
 					if(a_item.to_jsonitem != null){
 						a_item.to_jsonitem.SetItem(a_item.to_key_string,t_jsonitem_member,false);
 					}else{
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -331,22 +319,19 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 						JsonItem t_jsonitem_member = null;
 
-						if(a_item.nest < Config.CONVERTNEST_MAX){
-							t_jsonitem_member = ConvertObjectToJsonItem.Convert(t_raw,t_raw.GetType(),a_item.from_option,this,a_item.nest + 1);
-						}else{
-
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
-							DebugTool.Assert(false);
-							#endif
-
-							return false;
+						#if(DEF_BLUEBACK_LOG)
+						if(a_item.nest > byte.MaxValue){
+							DebugTool.Log(string.Format("WorkPool : nest : {0}",a_item.nest));
 						}
+						#endif
+
+						t_jsonitem_member = ConvertObjectToJsonItem.Convert(t_raw,t_raw.GetType(),a_item.from_option,this,a_item.nest + 1);
 
 						if(a_item.to_jsonitem != null){
 							a_item.to_jsonitem.SetItem(a_item.from_fieldinfo.Name,t_jsonitem_member,false);
 						}else{
 
-							#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 

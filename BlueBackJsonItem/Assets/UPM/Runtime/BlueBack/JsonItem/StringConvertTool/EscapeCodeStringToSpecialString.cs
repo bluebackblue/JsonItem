@@ -88,7 +88,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 				{
 					//失敗。
 
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -178,7 +178,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 					}else{
 						//失敗。
 
-						#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -189,7 +189,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 				{
 					//失敗。
 
-					#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 

@@ -145,7 +145,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 			//失敗。
 
-			#if(DEF_BLUEBACK_JSONITEM_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}
