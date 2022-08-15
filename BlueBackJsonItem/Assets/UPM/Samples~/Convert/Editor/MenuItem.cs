@@ -27,10 +27,10 @@ namespace BlueBack.JsonItem.Samples.Convert.Editor
 			public bool yy;
 			public float zzz;
 
-			[BlueBack.JsonItem.EnumString]
+			[BlueBack.JsonItem.Attribute.EnumString]
 			public E e1;
 
-			[BlueBack.JsonItem.EnumInt]
+			[BlueBack.JsonItem.Attribute.EnumInt]
 			public E e2;
 		}
 

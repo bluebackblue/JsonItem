@@ -43,7 +43,7 @@ namespace BlueBack.JsonItem
 							if(t_fieldinfo != null){
 
 								//オブジェクト化しない。Json文字列化しない。
-								if(t_fieldinfo.IsDefined(typeof(Ignore),false) == true){
+								if(t_fieldinfo.IsDefined(typeof(Attribute.Ignore),false) == true){
 									continue;
 								}
 

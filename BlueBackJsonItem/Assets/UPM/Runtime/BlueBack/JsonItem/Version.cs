@@ -21,7 +21,7 @@ namespace BlueBack.JsonItem
 
 		/** packageversion
 		*/
-		public const string packageversion = "0.0.33";
+		public const string packageversion = "0.0.34";
 
 		/** GetPackageVersion
 		*/

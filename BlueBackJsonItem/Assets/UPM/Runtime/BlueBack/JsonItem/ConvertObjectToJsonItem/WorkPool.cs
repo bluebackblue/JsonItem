@@ -316,7 +316,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 					//FieldInfo。
 
 					//ＥＮＵＭの文字列化。
-					if(a_item.from_fieldinfo.IsDefined(typeof(EnumString),false) == true){
+					if(a_item.from_fieldinfo.IsDefined(typeof(Attribute.EnumString),false) == true){
 						a_item.from_option = ConvertToJsonItemOption.EnumString;
 					}else{
 						a_item.from_option = ConvertToJsonItemOption.None;
