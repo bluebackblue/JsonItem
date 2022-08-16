@@ -73,7 +73,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 					default:
 						{
 
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -83,7 +83,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 					#pragma warning restore
 				}else{
 
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 

@@ -65,7 +65,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 						{
 							//不明な文字。
 
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -80,7 +80,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 			}else{
 				//開始位置が範囲外。
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(false);
 				#endif
 

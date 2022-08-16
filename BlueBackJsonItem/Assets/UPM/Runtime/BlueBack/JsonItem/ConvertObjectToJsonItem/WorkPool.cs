@@ -207,14 +207,14 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						//エラー。
 						this.list.Clear();
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
 
 					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(t_count > Config.LOOPLIMIT){
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false,string.Format("WorkPool : list : {0}",t_count));
 						#endif
 					}
@@ -238,7 +238,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(a_item.nest > Config.NESTLIMIT){
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
 						#endif
 					}
@@ -250,7 +250,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						a_item.to_jsonitem.AddItem(t_jsonitem_listitem,false);
 					}else{
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -265,7 +265,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(a_item.nest > Config.NESTLIMIT){
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
 						#endif
 					}
@@ -277,7 +277,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						a_item.to_jsonitem.SetItem(a_item.to_index,t_jsonitem_listitem,false);
 					}else{
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -292,7 +292,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(a_item.nest > Config.NESTLIMIT){
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
 						#endif
 					}
@@ -304,7 +304,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						a_item.to_jsonitem.SetItem(a_item.to_key_string,t_jsonitem_member,false);
 					}else{
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -329,7 +329,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 
 						#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 						if(a_item.nest > Config.NESTLIMIT){
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert(false,string.Format("WorkPool : nest : {0}",a_item.nest));
 							#endif
 						}
@@ -341,7 +341,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 							a_item.to_jsonitem.SetItem(a_item.from_fieldinfo.Name,t_jsonitem_member,false);
 						}else{
 
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 

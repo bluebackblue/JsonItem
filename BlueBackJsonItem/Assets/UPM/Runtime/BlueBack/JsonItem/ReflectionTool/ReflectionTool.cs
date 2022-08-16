@@ -324,14 +324,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 						}else{
 							//不明。
 
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 						}
 					}else{
 						//不明。
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
@@ -368,14 +368,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 								}else{
 									//不明。
 
-									#if(DEF_BLUEBACK_ASSERT)
+									#if(DEF_BLUEBACK_DEBUG_ASSERT)
 									DebugTool.Assert(false);
 									#endif
 								}
 							}else{
 								//不明。
 
-								#if(DEF_BLUEBACK_ASSERT)
+								#if(DEF_BLUEBACK_DEBUG_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 							}
@@ -395,14 +395,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 								}else{
 									//不明。
 
-									#if(DEF_BLUEBACK_ASSERT)
+									#if(DEF_BLUEBACK_DEBUG_ASSERT)
 									DebugTool.Assert(false);
 									#endif
 								}
 							}else{
 								//不明。
 
-								#if(DEF_BLUEBACK_ASSERT)
+								#if(DEF_BLUEBACK_DEBUG_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 							}
@@ -411,7 +411,7 @@ namespace BlueBack.JsonItem.ReflectionTool
 						t_type = typeof(System.Object);
 					}else{
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 

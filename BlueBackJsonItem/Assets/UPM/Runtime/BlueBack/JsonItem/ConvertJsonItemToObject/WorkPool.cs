@@ -331,7 +331,7 @@ namespace BlueBack.JsonItem.ConvertJsonItemToObject
 
 					#if(DEF_BLUEBACK_JSONITEM_NESTLIMIT)
 					if(t_count > Config.LOOPLIMIT){
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false,string.Format("WorkPool : list : {0}",t_count));
 						#endif
 					}

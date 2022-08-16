@@ -76,7 +76,7 @@ namespace BlueBack.JsonItem
 			{
 				t_methodinfo = ReflectionTool.ReflectionTool.FindMethodAllParam1(a_type,"Push",a_value_type);
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(t_methodinfo != null);
 				#endif
 			}
@@ -96,7 +96,7 @@ namespace BlueBack.JsonItem
 			{
 				t_methodinfo = ReflectionTool.ReflectionTool.FindMethodAllParam1(a_type,"AddLast",a_value_type);
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(t_methodinfo != null);
 				#endif
 			}
@@ -116,7 +116,7 @@ namespace BlueBack.JsonItem
 			{
 				t_methodinfo = ReflectionTool.ReflectionTool.FindMethodAllParam1(a_type,"Add",a_value_type);
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(t_methodinfo != null);
 				#endif
 			}
@@ -136,7 +136,7 @@ namespace BlueBack.JsonItem
 			{
 				t_methodinfo = ReflectionTool.ReflectionTool.FindMethodAllParam1(a_type,"Enqueue",a_value_type);
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(t_methodinfo != null);
 				#endif
 			}
@@ -156,7 +156,7 @@ namespace BlueBack.JsonItem
 			{
 				t_methodinfo = ReflectionTool.ReflectionTool.FindMethodAllParam1(a_type,"Add",a_value_type);
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(t_methodinfo != null);
 				#endif
 			}

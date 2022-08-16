@@ -23,7 +23,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 				if(a_in_jsonstring.Length < 2){
 					//不明。
 
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -33,7 +33,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 				if(a_in_jsonstring[0] != '\"'){
 					//不明。
 
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -49,7 +49,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 						{
 							//終端。
 
-							#if(DEF_BLUEBACK_ASSERT)
+							#if(DEF_BLUEBACK_DEBUG_ASSERT)
 							DebugTool.Assert((t_index + 1) == a_in_jsonstring.Length);
 							#endif
 
@@ -63,7 +63,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 							}else{
 								//不明。
 
-								#if(DEF_BLUEBACK_ASSERT)
+								#if(DEF_BLUEBACK_DEBUG_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 
@@ -82,7 +82,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 
 			//不明。
 
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 

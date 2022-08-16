@@ -279,7 +279,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.Dictionary<string,JsonItem> GetAssociativeArray()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.AssociativeArray);
 			#endif
 
@@ -290,7 +290,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.List<JsonItem> GetIndexArray()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.IndexArray);
 			#endif
 
@@ -301,7 +301,7 @@ namespace BlueBack.JsonItem
 		*/
 		public string GetStringData()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.StringData);
 			#endif
 
@@ -312,7 +312,7 @@ namespace BlueBack.JsonItem
 		*/
 		public SignedNumberType GetSignedNumber()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.SignedNumber);
 			#endif
 
@@ -323,7 +323,7 @@ namespace BlueBack.JsonItem
 		*/
 		public UnsignedNumberType GetUnsignedNumber()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.UnsignedNumber);
 			#endif
 
@@ -334,7 +334,7 @@ namespace BlueBack.JsonItem
 		*/
 		public FloatingNumberType GetFloatingNumber()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.FloatingNumber);
 			#endif
 
@@ -345,7 +345,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Boolean GetBoolData()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.BoolData);
 			#endif
 
@@ -356,7 +356,7 @@ namespace BlueBack.JsonItem
 		*/
 		public decimal GetDecimalNumber()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.DecimalNumber);
 			#endif
 
@@ -367,7 +367,7 @@ namespace BlueBack.JsonItem
 		*/
 		public System.Collections.Generic.List<byte> GetBinaryData()
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(this.valuetype == ValueType.BinaryData);
 			#endif
 
@@ -402,7 +402,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -440,7 +440,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -478,7 +478,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -516,7 +516,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -554,7 +554,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -592,7 +592,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -630,7 +630,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -668,7 +668,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -706,7 +706,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -744,7 +744,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -782,7 +782,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -820,7 +820,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -858,7 +858,7 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 

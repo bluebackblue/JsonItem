@@ -19,7 +19,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonString
 		*/
 		public static void Convert(System.Single a_in_value,System.Text.StringBuilder a_out_stringbuilder,ConvertToJsonStringOption a_option)
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			{
 				DebugTool.Assert((System.Single.IsNaN(a_in_value)|System.Single.IsInfinity(a_in_value)) == false); 
 			}
@@ -37,7 +37,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonString
 		*/
 		public static void Convert(System.Double a_in_value,System.Text.StringBuilder a_out_stringbuilder,ConvertToJsonStringOption a_option)
 		{
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			{
 				DebugTool.Assert((System.Double.IsNaN(a_in_value)|System.Double.IsInfinity(a_in_value)) == false); 
 			}

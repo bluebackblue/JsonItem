@@ -726,7 +726,7 @@ namespace BlueBack.JsonItem
 				default:
 					{
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
@@ -735,7 +735,7 @@ namespace BlueBack.JsonItem
 				#pragma warning restore
 			}else{
 
-				#if(DEF_BLUEBACK_ASSERT)
+				#if(DEF_BLUEBACK_DEBUG_ASSERT)
 				DebugTool.Assert(false);
 				#endif
 
@@ -784,7 +784,7 @@ namespace BlueBack.JsonItem
 				}break;
 			}
 
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -807,7 +807,7 @@ namespace BlueBack.JsonItem
 				}
 			}
 
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -829,7 +829,7 @@ namespace BlueBack.JsonItem
 				}
 			}
 
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -850,7 +850,7 @@ namespace BlueBack.JsonItem
 				if(t_associativearray.TryGetValue(a_itemname,out t_value) == true){
 					if((t_value.value.valuetype | a_valuetype) > 0){
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert((t_value.value.valuetype & ValueType.Calc) == 0);
 						#endif
 
@@ -875,7 +875,7 @@ namespace BlueBack.JsonItem
 				if(a_index < t_indexarray.Count){
 					if((t_indexarray[a_index].value.valuetype | a_valuetype) > 0){
 
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert((t_indexarray[a_index].value.valuetype & ValueType.Calc) == 0);
 						#endif
 
@@ -973,7 +973,7 @@ namespace BlueBack.JsonItem
 					}
 				}else{
 
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -1042,7 +1042,7 @@ namespace BlueBack.JsonItem
 				return t_associativearray.Keys;
 			}
 
-			#if(DEF_BLUEBACK_ASSERT)
+			#if(DEF_BLUEBACK_DEBUG_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 
@@ -1114,7 +1114,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 
-					#if(DEF_BLUEBACK_ASSERT)
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -1221,7 +1221,7 @@ namespace BlueBack.JsonItem
 					}break;
 				default:
 					{
-						#if(DEF_BLUEBACK_ASSERT)
+						#if(DEF_BLUEBACK_DEBUG_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 
