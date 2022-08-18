@@ -56,7 +56,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 									//文字サイズの取得に失敗。
 
 									#if(DEF_BLUEBACK_DEBUG_ASSERT)
-									DebugTool.Assert(false);
+									DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_jsonstring[t_index],a_jsonstring));
 									#endif
 
 									return 0;
@@ -73,7 +73,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 					//終端前に範囲外。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_jsonstring[t_index],a_jsonstring));
 					#endif
 
 					return 0;
@@ -81,7 +81,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 					//連想配列以外。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_jsonstring[t_index],a_jsonstring));
 					#endif
 
 					return 0;
@@ -90,7 +90,7 @@ namespace BlueBack.JsonItem.JsonStringLength
 				//開始位置が範囲外。
 
 				#if(DEF_BLUEBACK_DEBUG_ASSERT)
-				DebugTool.Assert(false);
+				DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_jsonstring[t_index],a_jsonstring));
 				#endif
 
 				return 0;

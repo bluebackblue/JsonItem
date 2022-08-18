@@ -325,14 +325,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 							//不明。
 
 							#if(DEF_BLUEBACK_DEBUG_ASSERT)
-							DebugTool.Assert(false);
+							DebugTool.Assert(false,string.Format("{0}",a_type));
 							#endif
 						}
 					}else{
 						//不明。
 
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert(false);
+						DebugTool.Assert(false,string.Format("{0}",a_type));
 						#endif
 					}
 				}
@@ -369,14 +369,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 									//不明。
 
 									#if(DEF_BLUEBACK_DEBUG_ASSERT)
-									DebugTool.Assert(false);
+									DebugTool.Assert(false,string.Format("{0}",a_type));
 									#endif
 								}
 							}else{
 								//不明。
 
 								#if(DEF_BLUEBACK_DEBUG_ASSERT)
-								DebugTool.Assert(false);
+								DebugTool.Assert(false,string.Format("{0}",a_type));
 								#endif
 							}
 						}else if(
@@ -396,14 +396,14 @@ namespace BlueBack.JsonItem.ReflectionTool
 									//不明。
 
 									#if(DEF_BLUEBACK_DEBUG_ASSERT)
-									DebugTool.Assert(false);
+									DebugTool.Assert(false,string.Format("{0}",a_type));
 									#endif
 								}
 							}else{
 								//不明。
 
 								#if(DEF_BLUEBACK_DEBUG_ASSERT)
-								DebugTool.Assert(false);
+								DebugTool.Assert(false,string.Format("{0}",a_type));
 								#endif
 							}
 						}
@@ -412,7 +412,7 @@ namespace BlueBack.JsonItem.ReflectionTool
 					}else{
 
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert(false);
+						DebugTool.Assert(false,string.Format("{0}",a_type));
 						#endif
 
 						t_type = typeof(System.Object);

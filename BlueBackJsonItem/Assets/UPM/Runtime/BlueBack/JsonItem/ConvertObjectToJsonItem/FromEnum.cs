@@ -74,7 +74,7 @@ namespace BlueBack.JsonItem.ConvertObjectToJsonItem
 						{
 
 							#if(DEF_BLUEBACK_DEBUG_ASSERT)
-							DebugTool.Assert(false);
+							DebugTool.Assert(false,string.Format("{0}",t_enum.GetTypeCode()));
 							#endif
 
 							return null;

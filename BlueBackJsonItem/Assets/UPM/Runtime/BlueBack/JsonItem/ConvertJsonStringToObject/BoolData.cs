@@ -23,7 +23,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 				//不明。
 
 				#if(DEF_BLUEBACK_DEBUG_ASSERT)
-				DebugTool.Assert(false);
+				DebugTool.Assert(false,string.Format("{0}",a_in_jsonstring));
 				#endif
 
 				a_out_value = default;

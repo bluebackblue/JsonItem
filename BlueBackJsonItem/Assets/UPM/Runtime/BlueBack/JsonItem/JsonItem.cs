@@ -736,7 +736,7 @@ namespace BlueBack.JsonItem
 			}else{
 
 				#if(DEF_BLUEBACK_DEBUG_ASSERT)
-				DebugTool.Assert(false);
+				DebugTool.Assert(false,string.Format("{0}",a_jsonstring));
 				#endif
 
 			}
@@ -782,11 +782,13 @@ namespace BlueBack.JsonItem
 						return t_binarydata.Count;
 					}
 				}break;
+			default:
+				{
+					#if(DEF_BLUEBACK_DEBUG_ASSERT)
+					DebugTool.Assert(false,string.Format("{0}",this.value.valuetype));
+					#endif
+				}break;
 			}
-
-			#if(DEF_BLUEBACK_DEBUG_ASSERT)
-			DebugTool.Assert(false);
-			#endif
 
 			return 0;
 		}
@@ -808,7 +810,7 @@ namespace BlueBack.JsonItem
 			}
 
 			#if(DEF_BLUEBACK_DEBUG_ASSERT)
-			DebugTool.Assert(false);
+			DebugTool.Assert(false,string.Format("{0}",a_itemname));
 			#endif
 
 			return null;
@@ -851,7 +853,7 @@ namespace BlueBack.JsonItem
 					if((t_value.value.valuetype | a_valuetype) > 0){
 
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert((t_value.value.valuetype & ValueType.Calc) == 0);
+						DebugTool.Assert((t_value.value.valuetype & ValueType.Calc) == 0,string.Format("{0}",a_itemname));
 						#endif
 
 						return true;
@@ -876,7 +878,7 @@ namespace BlueBack.JsonItem
 					if((t_indexarray[a_index].value.valuetype | a_valuetype) > 0){
 
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert((t_indexarray[a_index].value.valuetype & ValueType.Calc) == 0);
+						DebugTool.Assert((t_indexarray[a_index].value.valuetype & ValueType.Calc) == 0,string.Format("{0}",a_index));
 						#endif
 
 						return true;
@@ -974,7 +976,7 @@ namespace BlueBack.JsonItem
 				}else{
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",a_index));
 					#endif
 
 				}
@@ -1113,9 +1115,8 @@ namespace BlueBack.JsonItem
 				}break;
 			default:
 				{
-
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.value.valuetype));
 					#endif
 
 					return;
@@ -1222,7 +1223,7 @@ namespace BlueBack.JsonItem
 				default:
 					{
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert(false);
+						DebugTool.Assert(false,string.Format("{0}",this.value.valuetype));
 						#endif
 
 						this.value.raw = null;

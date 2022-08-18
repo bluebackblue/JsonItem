@@ -49,7 +49,7 @@ namespace BlueBack.JsonItem
 							//サイズの取得に失敗。
 
 							#if(DEF_BLUEBACK_DEBUG_ASSERT)
-							DebugTool.Assert(false);
+							DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_jsonstring[t_index],a_jsonstring));
 							#endif
 
 							return "";

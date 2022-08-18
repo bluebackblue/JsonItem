@@ -89,7 +89,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 					//失敗。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",a_char));
 					#endif
 
 					a_out_char = a_char;
@@ -179,7 +179,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 						//失敗。
 
 						#if(DEF_BLUEBACK_DEBUG_ASSERT)
-						DebugTool.Assert(false);
+						DebugTool.Assert(false,string.Format("offset = {0} : char = {1} : {2}",a_offset,a_string[a_offset],a_string));
 						#endif
 
 						return 0;
@@ -190,7 +190,7 @@ namespace BlueBack.JsonItem.StringConvertTool
 					//失敗。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("offset = {0} : char = {1} : {2}",a_offset,a_string[a_offset],a_string));
 					#endif
 
 					return 0;

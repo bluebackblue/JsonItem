@@ -67,7 +67,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",a_jsonitem.GetValueType()));
 					#endif
 
 					return null;

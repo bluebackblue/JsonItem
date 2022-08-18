@@ -403,7 +403,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -441,7 +441,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -479,7 +479,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -517,7 +517,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -555,7 +555,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -593,7 +593,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -631,7 +631,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -669,7 +669,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -707,7 +707,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -745,7 +745,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -783,7 +783,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -821,7 +821,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;
@@ -859,7 +859,7 @@ namespace BlueBack.JsonItem
 			default:
 				{
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",this.valuetype));
 					#endif
 
 					return default;

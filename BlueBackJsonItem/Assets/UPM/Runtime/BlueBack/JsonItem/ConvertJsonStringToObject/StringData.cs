@@ -24,7 +24,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 					//不明。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",a_in_jsonstring));
 					#endif
 
 					return;
@@ -34,7 +34,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 					//不明。
 
 					#if(DEF_BLUEBACK_DEBUG_ASSERT)
-					DebugTool.Assert(false);
+					DebugTool.Assert(false,string.Format("{0}",a_in_jsonstring));
 					#endif
 
 					return;
@@ -50,7 +50,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 							//終端。
 
 							#if(DEF_BLUEBACK_DEBUG_ASSERT)
-							DebugTool.Assert((t_index + 1) == a_in_jsonstring.Length);
+							DebugTool.Assert((t_index + 1) == a_in_jsonstring.Length,string.Format("{0}",a_in_jsonstring));
 							#endif
 
 							return;
@@ -64,7 +64,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 								//不明。
 
 								#if(DEF_BLUEBACK_DEBUG_ASSERT)
-								DebugTool.Assert(false);
+								DebugTool.Assert(false,string.Format("index = {0} : char = {1} : {2}",t_index,a_in_jsonstring[t_index],a_in_jsonstring));
 								#endif
 
 								return;
@@ -83,7 +83,7 @@ namespace BlueBack.JsonItem.ConvertJsonStringToObject
 			//不明。
 
 			#if(DEF_BLUEBACK_DEBUG_ASSERT)
-			DebugTool.Assert(false);
+			DebugTool.Assert(false,string.Format("{0}",a_in_jsonstring));
 			#endif
 
 			return;
